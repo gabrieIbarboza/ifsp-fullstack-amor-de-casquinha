@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Nunito:wght@400;700&display=swap');
+
+:root{
+    --roxo-bebe: #D4C7FF;
+    --Nunito: 'Nunito', sans-serif;
+    --Agbalumo: 'Agbalumo';
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.cabecalho{
+    background-color: var(--roxo-bebe);
+    height: 130px;
+    font-family: var(--Agbalumo);
+    font-size: 24px;
+    border-radius: 0 0 11% 11%;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 999;
+}
+
+main{
+    padding-top: 150px;
+}
+
+.titulo1{
+    display: none;
+}
+
+.cabecalho #menu{
+    width: 12%;
+    height: 17%;
+}
+
+.cabecalho .login, .sobre{
+    display: none;
+}
+
+.cabecalho a, a:visited, a:active{
+    color: black;
+    text-decoration: none;
+}
+
+.rodape {
+    padding-top: 15px;
+    background-color: var(--roxo-bebe);
+    height: 170px;
+    font-family: var(--Agbalumo);
+    font-size: 24px;
+    border-radius: 11% 11% 0 0;
+    margin-top: 10%;
+}
+
+.rodape p{
+    font-size: 1rem;
+    margin-top: 15px;
+}
+
+@media (min-width: 768px) {
+    .cabecalho{
+        height: 122px;
+        border-radius: 0 0 30px 30px;
+    }
+    .titulo1{
+        display: block;
+    }
+    img{
+        width: 89px;
+        height: 85px;
+    }
+    .cabec1{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .cabecalho .login, .sobre{
+        display: block;
+    }
+    .titulo1{
+        width: 300px;
+    }
+    .naveg{
+        display: flex;
+        align-items: center !important;
+        width: 35% !important;
+    }
+    .naveg a{
+        font-size: 1.8rem;
+    }
+    #menu{
+        display: none;
+    }
+    .carrinho{
+        width: 37px;
+        height: 40.491px;
+    }
+    .rodape .linha{
+        width: 1176px;
+        height: 24px;
+    }
+    .logo{
+        width: 90px;
+        height: 60px;  
+    }
+    .rodape h3{
+        font-family: var(--Agbalumo);
+        font-size: 35px;
+    }
+    .rodape p{
+        font-size: 19.254px;
+    }
+}

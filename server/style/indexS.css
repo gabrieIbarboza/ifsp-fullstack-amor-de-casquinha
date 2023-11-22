@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Nunito:wght@400;700&display=swap');
+
+:root{
+    --roxo-bebe: #D4C7FF;
+    --Nunito: 'Nunito', sans-serif;
+    --Agbalumo: 'Agbalumo';
+    --azul-bebe: #C9EFFF;
+    --rosa-bebe: #FFC7E8;
+}
+
+header h1{
+    font-family: var(--Agbalumo);
+    font-size: 2rem;
+    width: 70%;
+    margin: 2% auto;
+}
+
+.conteiner1{
+    background-color: var(--azul-bebe);
+    width: 89%;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 0 auto 70px;
+}
+
+.c1{
+    display: grid;
+    grid-template-columns: 160px 160px;
+}
+
+.conteiner1 h3{
+    font-family: var(--Agbalumo);
+    font-size: 1.50rem;
+    text-align: center;
+    width: 80%;
+    padding-bottom: 10px;
+}
+
+.categ{
+    width: 148px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    height: 210px;
+}
+
+.categ img{
+    width: 148px;
+    border-radius: 20px;
+}
+
+.categ button{
+    width: 90px;
+    border: none;
+    background-color: var(--rosa-bebe);
+    border-radius: 20px;
+    font-family: var(--Nunito);
+    font-weight: bold;
+    margin-top: 2%;
+}
+
+.categ button a, a:visited, a:active{
+    text-decoration: none;
+    color: black;
+}
+
+.categ h4{
+    font-family: var(--Nunito);
+    font-size: 1.30rem;
+    text-align: center;
+    margin: 9px 0;
+}
+
+@media (min-width: 768px) {
+    .conteiner1{
+        width: 969px;
+    }
+    .conteiner1 h3{
+        font-size: 28px;
+    }
+    .c1{
+        display: flex;
+        justify-content: space-around !important;
+        flex-direction: row !important;
+        flex-wrap: wrap;
+    }
+    .categ{
+        flex-direction: row;
+        width: 362px;
+        height: 138px;
+        border: none;
+        display: flex;
+    }
+    .c2{
+        display: flex;
+        align-items: flex-start !important;
+        margin: 20px;
+    }
+    .c2 h4{
+        margin: 15px 0 !important;
+    }
+    .categ img{
+        width: 131px;
+        height: 134px;
+    }
+    
+}

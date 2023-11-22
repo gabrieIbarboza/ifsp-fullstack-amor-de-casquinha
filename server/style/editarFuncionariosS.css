@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Nunito:wght@400;700&display=swap');
+
+:root{
+    --roxo-bebe: #D4C7FF;
+    --Nunito: 'Nunito', sans-serif;
+    --Agbalumo: 'Agbalumo';
+    --azul-bebe: #C9EFFF;
+    --rosa-bebe: #FFC7E8;
+    --amarelo-bebe: #FFFAC7;
+    --verde-bebe: #E2FFC7;
+}
+
+h1{
+    font-family: var(--Agbalumo);
+    font-size: 2rem;
+    width: 70%;
+    text-align: center;
+    margin: 20px auto;
+}
+
+main{
+    min-height: calc(100vh - 170px);
+}
+
+.imagem{
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.add{
+    background-color: var(--azul-bebe);
+    border: none;
+    border-radius: 20px;
+    font-family: var(--Nunito);
+    font-weight: bolder;
+    font-size: 1.30rem;
+    width: 240px;
+    height: 40px;
+    margin: 20px 0;
+}
+
+.c1{
+    background-color: var(--amarelo-bebe);
+    padding: 15px;
+    border-radius: 20px;
+    margin: 20px 0;
+}
+
+.conteiner1 button{
+    width: 208px;
+    background-color: var(--azul-bebe);
+}
+
+.titulo{
+    margin-top: 10px;
+    font-family: var(--Nunito);
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.botao #excl{
+    background-color: var(--rosa-bebe);
+    border: none;
+    border-radius: 7px;
+    font-family: var(--Agbalumo);
+    width: 90px;
+    height: 30px;
+}
+
+.botao #edit{
+    background-color: var(--azul-bebe);
+    border: none;
+    border-radius: 7px;
+    font-family: var(--Agbalumo);
+    width: 90px;
+    height: 30px;
+}
+
+.voltar{
+    background-color: var(--azul-bebe);
+    border: none;
+    border-radius: 20px;
+    font-family: var(--Nunito);
+    font-weight: bolder;
+    font-size: 1.60rem;
+    width: 190px;
+    height: 40px;
+    margin-top: 20px;
+}
+
+.voltar a, a:visited, a:active{
+    color: black;
+    text-decoration: none;
+}
+
+@media (min-width: 768px) {
+    .imagem{
+        width: 107px;
+        height: 113px;
+    }
+    .conteiner1{
+        display: flex;
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        width: 90%;
+        justify-content: center;
+    }
+    .c1{
+        margin: 29px;
+    }
+    h1{
+        padding-top: 20px !important;
+    }
+    .botao #excl, #edit{
+        font-size: 1.25rem;
+    }
+    
+}

@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Nunito:wght@400;700&display=swap');
+
+:root{
+    --roxo-bebe: #D4C7FF;
+    --Nunito: 'Nunito', sans-serif;
+    --Agbalumo: 'Agbalumo';
+    --azul-bebe: #C9EFFF;
+    --rosa-bebe: #FFC7E8;
+    --amarelo-bebe: #FFFAC7;
+    --verde-bebe: #E2FFC7;
+}
+
+.titulo{
+    margin: 45px 0 15px 46px;
+    font-family: var(--Agbalumo);
+    font-weight: bold;
+}
+
+.conteiner1{
+    background-color: var(--azul-bebe);
+    width: 352px;
+    padding: 20px 15px;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+
+.c1{
+    margin: 20px 0;
+}
+
+.botao #excl{
+        background-color: var(--rosa-bebe);
+        border: none;
+        border-radius: 7px;
+        font-family: var(--Agbalumo);
+        padding: 1px 10px;
+        height: 30px;
+}
+
+select{
+    width: 80px;
+    margin-left: 35px;
+    border: none;
+}
+
+.conc{
+    width: 130px;
+    font-family: var(--Agbalumo);
+    font-size: 1.40rem;
+    height: 40px;
+    background-color: white;
+    border-radius: 15px;
+    border: none;
+}
+
+.voltar{
+    background-color: var(--azul-bebe);
+    border: none;
+    border-radius: 20px;
+    font-family: var(--Nunito);
+    font-weight: bolder;
+    font-size: 1.60rem;
+    width: 190px;
+    height: 40px;
+    margin-top: 30px;
+}
+
+.voltar a, a:visited, a:active{
+    text-decoration: none;
+    color: black;
+}
+
+@media (min-width: 768px) {
+    .imagem{
+        width: 107px;
+        height: 113px;
+        border-radius: 23px;
+    }
+    .conteiner1{
+        width: 970px;
+    }
+    .c1{
+        width: 700px !important;
+    }
+    .c2{
+        max-width: 20% !important;
+    }
+    .c3{
+        max-width: 60% !important;
+    }
+    .botao{
+        display: flex;
+        justify-content: flex-start !important;
+    }
+    .botao .excl{
+        padding-right: 0 !important;
+        max-width: 20%;
+    }
+    .preco{
+        padding-left: 0 !important;
+    }
+    .titulo{
+        display: flex;
+        justify-content: center;
+        margin-left: 0 !important;
+    }
+}
