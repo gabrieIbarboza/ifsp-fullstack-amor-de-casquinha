@@ -574,6 +574,17 @@ BEGIN
 END;
 //
 DELIMITER //
+CREATE PROCEDURE SP_VariacaoReadByProduto(
+	produto varchar(50)
+)
+BEGIN
+	SET @produto_id := (SELECT idProduto FROM tbProduto WHERE nomeProduto like produto);
+	SELECT * 
+		FROM tbVariacaoProduto 
+        WHERE tbProduto_idProduto = @produto_id;
+END;
+//
+DELIMITER //
 CREATE PROCEDURE SP_VariacaoReadByName(
 	nome varchar(50)
 )
@@ -911,6 +922,18 @@ call SP_PedidoReadByStatus(
 	'Recebido'
 );
 
+
+-- FRONTEND TEST
+call SP_ProdutoCreate(
+    'Sorvete em Bola', 'Bola', 'images/sorveteBolaDesktop.png'
+);
+call SP_ProdutoCreate(
+    'Picolé', 'Picolé', 'images/picoleDesktop.png'
+);
+call SP_ProdutoReadAllActive(1000,0);
+call SP_ProdutoUpdate(
+	'Açaí', 'Açaí', 'Açaí', 'images/sorvetePoteDesktop.png', 1
+);
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
