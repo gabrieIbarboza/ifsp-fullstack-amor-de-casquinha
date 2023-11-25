@@ -574,6 +574,16 @@ BEGIN
 END;
 //
 DELIMITER //
+CREATE PROCEDURE SP_VariacaoReadByProdutoId(
+	idProduto int
+)
+BEGIN
+	SELECT * 
+		FROM tbVariacaoProduto 
+        WHERE tbProduto_idProduto = idProduto;
+END;
+//
+DELIMITER //
 CREATE PROCEDURE SP_VariacaoReadByProduto(
 	produto varchar(50)
 )
@@ -582,6 +592,17 @@ BEGIN
 	SELECT * 
 		FROM tbVariacaoProduto 
         WHERE tbProduto_idProduto = @produto_id;
+END;
+//
+DELIMITER //
+CREATE PROCEDURE SP_VariacaoReadById(
+	id int
+)
+BEGIN
+	SELECT * 
+		FROM tbVariacaoProduto 
+        WHERE isActive = 1
+		AND idVariacao = id;
 END;
 //
 DELIMITER //
@@ -934,6 +955,7 @@ call SP_ProdutoReadAllActive(1000,0);
 call SP_ProdutoUpdate(
 	'Açaí', 'Açaí', 'Açaí', 'images/sorvetePoteDesktop.png', 1
 );
+call SP_VariacaoReadById(1);
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;

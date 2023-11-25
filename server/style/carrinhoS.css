@@ -28,7 +28,7 @@
     margin: 20px 0;
 }
 
-.botao #excl{
+.botao .b-excluir{
         background-color: var(--rosa-bebe);
         border: none;
         border-radius: 7px;

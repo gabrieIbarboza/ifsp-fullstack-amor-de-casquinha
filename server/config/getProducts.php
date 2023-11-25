@@ -9,7 +9,9 @@ $stmt->bindParam(2, $recordsOffset);
 $stmt->execute();
 
 do {
-    while ($row = $stmt->fetch()) {
+    while ($row = $stmt->fetch()) 
+    {
+        $redirectTo = 'sabores.php?produto='.$row['idProduto'];
         echo '<div class="card categ d-flex align-items-center">
         <picture>
             <source media="(min-width: 768px)" srcset="'.$row["fotoProduto"].'">
@@ -17,7 +19,7 @@ do {
         </picture>
         <div class="d-flex align-items-center flex-column c2">
             <h4>'.$row["nomeProduto"].'</h4>
-            <button><a href="sabores.html">ver</a></button>
+            <button><a href="'.$redirectTo.'">ver</a></button>
         </div>
         </div>';
     }
