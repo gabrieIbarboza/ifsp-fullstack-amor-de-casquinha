@@ -2,7 +2,7 @@
 $servername = "localhost";
 $dbname = "db_sorveteria";
 $username = "root";
-$password = "@Mudar123";
+$password = "";
 $conn = "";
 
 try {
