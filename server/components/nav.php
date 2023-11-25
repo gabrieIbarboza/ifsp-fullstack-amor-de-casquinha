@@ -7,9 +7,9 @@
         <div class="d-flex justify-content-around w-50 align-items-end naveg">
             <a href="index.php">Início</a>
             <a href="login.html" class="login">Login</a>
-            <a href="carrinho.php"><img src="../images/Icon.svg" alt="Carrinho de compras" class="carrinho"></a>
+            <a href="carrinho.php"><img src="images/Icon.svg" alt="Carrinho de compras" class="carrinho"></a>
             <a href="sobre.html" class="sobre">Área do Funcionário</a>
-            <img src="../images/image 2.png" alt="Menu" id="menu">
+            <img src="images/image 2.png" alt="Menu" id="menu">
         </div>
     </div>
 </nav>
