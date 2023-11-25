@@ -39,11 +39,31 @@ main{
     margin: 20px 0;
 }
 
+.conteiner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .c1{
     background-color: var(--amarelo-bebe);
     padding: 15px;
     border-radius: 20px;
     margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.c2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.c3{
+    width: 200px;
+    display: flex;
+    justify-content: center;
 }
 
 .conteiner1 button{
@@ -93,11 +113,28 @@ main{
     text-decoration: none;
 }
 
+.exibir{
+    display: flex !important;
+    flex-direction: column;
+}
+
+form input{
+    padding-left: 4px;
+    border-radius: 10px;
+    border: 2px solid rgb(167, 167, 167);
+}
+
+form button[type=submit]{
+    border: none !important;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+form{
+    display: none !important;
+}
+
 @media (min-width: 768px) {
-    .imagem{
-        width: 107px;
-        height: 113px;
-    }
     .conteiner1{
         display: flex;
         flex-direction: row !important;
@@ -107,12 +144,17 @@ main{
     }
     .c1{
         margin: 29px;
+        width: 520px;
     }
     h1{
         padding-top: 20px !important;
     }
     .botao #excl, #edit{
         font-size: 1.25rem;
+    }
+    .c3 img{
+        width: 150px;
+        height: 150px;
     }
     
 }

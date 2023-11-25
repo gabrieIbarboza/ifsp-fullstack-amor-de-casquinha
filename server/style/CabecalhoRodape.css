@@ -68,6 +68,7 @@ main{
     }
     .titulo1{
         display: block;
+        width: 250px;
     }
     img{
         width: 89px;
@@ -81,9 +82,6 @@ main{
     }
     .cabecalho .login, .sobre{
         display: block;
-    }
-    .titulo1{
-        width: 300px;
     }
     .naveg{
         display: flex;

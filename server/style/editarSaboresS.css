@@ -25,6 +25,11 @@ main{
     background-color: var(--azul-bebe);
 }
 
+.conteiner1{
+    display: flex;
+    flex-direction: column;
+}
+
 .c1{
     background-color: var(--amarelo-bebe);
     padding: 15px;
@@ -42,10 +47,12 @@ main{
     font-family: var(--Nunito);
     font-size: 1.25rem;
     font-weight: bold;
+    padding-left: 10px;
 }
 
 .preco{
     margin: 50px 0 0 0;
+    padding-left: 10px;
 }
 
 .preco span{
@@ -99,16 +106,40 @@ main{
     text-decoration: none;
 }
 
+.c1 form{
+    display: none;
+    padding-left: 10px;
+}
 
+.exibir{
+    display: flex !important;
+    flex-direction: column;
+}
+form input{
+    padding-left: 4px;
+    border-radius: 10px;
+    border: 2px solid rgb(167, 167, 167);
+}
+
+form button[type=submit]{
+    border: none !important;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+form{
+    display: none;
+}
 
 @media (min-width: 768px) {
+    
     .imagem{
         width: 107px;
         height: 113px;
     }
     .conteiner1{
         display: flex;
-        flex-direction: row !important;
+        flex-direction: row;
         flex-wrap: wrap;
         width: 90%;
         justify-content: center;
