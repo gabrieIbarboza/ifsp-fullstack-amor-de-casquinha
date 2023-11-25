@@ -15,7 +15,7 @@
         include_once 'components/nav.php';
     ?>
     <header>
-        <h1 class="m-auto text-center pt-4 pb-4">Bem vindo ao Amor de Casquinha</h1>
+        <h1 class="m-auto text-center pt-4 pb-4">Boas-vindas ao Amor de Casquinha!</h1>
     </header>
     <main>
         <section>

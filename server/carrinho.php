@@ -26,7 +26,7 @@
                     include_once 'config/getCart.php';
                 ?>
             </div>
-            <button class="voltar"><a href="index.html">Voltar</a></button>
+            <button class="voltar"><a href="index.php">Voltar</a></button>
         </div>
     </main>
     <?php
