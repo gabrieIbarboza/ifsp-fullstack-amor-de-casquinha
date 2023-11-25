@@ -8,9 +8,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="style/CabecalhoRodape.css">
-    <link rel="stylesheet" href="style/sobreS.css">
+    <link rel="stylesheet" href="style/editarSaboresS.css">
 </head>
 <body>
+    <!-- Estilização check -->
     <nav>
         <div class="conteiner-fluid d-flex justify-content-around cabecalho align-items-center">
             <div class="cabec1">
@@ -26,65 +27,60 @@
             </div>
         </div>
     </nav>
-
+    
     <main>
-        <div class="conteiner1 conteiner d-flex align-items-center flex-column w-75 p-4 my-3">
-            <div class="c1">
-                <div class="d-flex justify-content-center m-2"><img src="images/funcionario1.png" alt="" ></div>
-                <div id="dados">
-                    <p>Nome: Amanda</p>
-                    <p>Data de nascimento: 15/02/1997</p>
-                    <p>Endereço: Rua da Luz, 42</p>
-                </div>
-
+            <h1>Picolé Sabores</h1>
         
-                <form action="" method="POST" id="formulario">
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" placeholder="Nome completo">
-                    <label for="dataNasc">Data de nascimento:</label>
-                    <input type="date" id="dataNasc" placeholder="Data de nascimento">
-                    <label for="endereco">Endereço:</label>
-                    <input type="text" id="endereco" placeholder="Endereço">
-                    <button type="submit">Salvar</button>
-                </form>
-            </div>
-            <button id="edit">Editar</button>
-        </div>
+        <div class=" d-flex flex-column align-items-center justify-content-center">
+            <button class="add">Adicionar Sabor</button>
+            <div>
+                    <form action="" method="POST" id="addFormulario">
+                        <label for="nome1">Nome:</label>
+                        <input type="text" id="nome1" name="nomeSabAdd" placeholder="Nome do produto">
+                        <label for="preco1">Preço:</label>
+                        <input type="text" id="preco1" name="precoSabAdd" placeholder="Preço do produto">
+                        <label for="nomeImagem">Nome do arquivo de imagem:</label>
+                        <input type="text" id="nomeImagem" name="nomeImagemSabAdd" placeholder="imagem.png">
+                        <button type="submit">Salvar</button>
+                    </form>
+                </div>
+            <div class="conteiner1">
+                <div class="c1">
 
-        <div class="conteiner1 conteiner d-flex align-items-center flex-column w-75 p-4 my-3">
-            <h3>Meus pedidos</h3>
-            <div class="c1">
-                <div class="d-flex flex-row">
-                    <div class="c2">
-                        <img src="images/picoleCoco.png" alt="Picolé sabor coco" class="imagem">
-                    </div>
-                    <div class="d-flex flex-column c3 ps-2">
-                        <h3>Nestlé La Frutta Coco</h3>
-                        <div class="preco d-flex flex-row justify-content-between">
-                            <p>Preço</p>
-                            <span>R$ 1,50</span>
-                            
+                    <div class="d-flex flex-row">
+                        <div class="col col-4">
+                            <img src="images/picoleCoco.png" alt="Picolé sabor coco" class="imagem">
+                        </div>
+                        <div id="dados">
+                            <h3 class="titulo px-2">Nestlé La Frutta Coco</h3>
+                            <div class="preco d-flex flex-row justify-content-between px-2">
+                                <p>Preço</p>
+                                <span>R$ 1,50</span>
+                            </div>
                         </div>
                         <div>
-                            <p>Endereço: </p>
-                            <p>Cliente: </p>
+                            <form action="" method="POST" id="formulario" class="formulario">
+                                <label for="nome2">Nome:</label>
+                                <input type="text" id="nome2" name="nomeSabEdt" placeholder="Nome do produto">
+                                <label for="preco2">Preço:</label>
+                                <input type="text" id="preco2" name="precoSabEdt" placeholder="Preço do produto">
+                                <button type="submit">Salvar</button>
+                            </form>
                         </div>
                     </div>
-                </div>
-                <div class="botao text-center d-flex justify-content-between mt-3 flex-row">
-                        <div class="excl">
-                            <button id="excl">Excluir</button>
-                        </div>
-                        <div>
-                            <p>Quantidade: 1</p>
-                        </div>
+
+                    <div class="botao text-center d-flex justify-content-evenly mt-3">
+                        <button id="excl">Excluir</button>
+                        <button id="edit">Editar</button>
+                    </div>
+
                 </div>
             </div>
+            <button class="voltar"><a href="index.html">Voltar</a></button>
         </div>
     </main>
-
     
-
+    
     <footer>
         <div class="conteiner-fluid d-flex justify-content-center rodape align-items-center flex-column">
             <div class="d-flex flex-row justify-content-around align-items-center">
@@ -98,6 +94,7 @@
         </div>
     </footer>
     
+    <script src="script/adicionar.js"></script>
     <script src="script/editar.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
