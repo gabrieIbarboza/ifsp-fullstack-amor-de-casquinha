@@ -10,8 +10,7 @@
     --verde-bebe: #E2FFC7;
 }
 
-.titulo{
-    margin: 45px 0 15px 46px;
+h1{
     font-family: var(--Agbalumo);
     font-weight: bold;
 }
@@ -31,13 +30,29 @@
     padding: 8px 0;
 }
 
-.botao .b-excluir{
+.c2 img{
+    border-radius: 20px;
+}
+
+.c3 h3{
+    font-size: 1.50rem;
+}
+
+.botao #excl{
         background-color: var(--rosa-bebe);
         border: none;
         border-radius: 7px;
         font-family: var(--Agbalumo);
         padding: 1px 10px;
         height: 30px;
+}
+
+.botao p{
+    background-color: var(--rosa-bebe);
+    height: 30px;
+    padding: 1px 10px;
+    border-radius: 7px;
+    font-family: var(--Agbalumo);
 }
 
 select{
@@ -90,10 +105,6 @@ select{
     }
     .c3{
         max-width: 60% !important;
-    }
-    .botao{
-        display: flex;
-        justify-content: flex-start !important;
     }
     .botao .excl{
         padding-right: 0 !important;

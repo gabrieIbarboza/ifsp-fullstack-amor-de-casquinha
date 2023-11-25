@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="style/loginS.css">
 </head>
 <body>
+    <!-- Estilização check -->
     <nav>
         <div class="conteiner-fluid d-flex justify-content-around cabecalho align-items-center">
             <div class="cabec1">
