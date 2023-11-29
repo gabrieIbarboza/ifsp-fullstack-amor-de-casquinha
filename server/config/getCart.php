@@ -58,28 +58,28 @@ if(isset($_SESSION["cartArray"]))
             </div>
         </div>
         <div class="botao text-center d-flex justify-content-evenly mt-3 flex-row row">
-                <div class="col col-3 d-flex align-items-start excl">
-                    <button id="'.$id.'" class="b-excluir">Excluir</button>
-                </div>
-                <div class="col d-flex align-items-start col-7">
-                    <p>Quantid.</p>
-                    <select name="selecao">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                    </select>
-                </div>
+            <div class="col col-3 d-flex align-items-start excl">
+                <button id="'.$id.'" class="b-excluir">Excluir</button>
+            </div>
+            <div class="col d-flex align-items-start col-7">
+                <p>Quantid.</p>
+                <select name="selecao">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
         </div>
         </div>';
     }
-    echo '<button class="conc">Concluir</button>';
+    echo '<button class="conc"><a href="notaFiscal.php">Concluir</a></button>';
 }
 else
 {
