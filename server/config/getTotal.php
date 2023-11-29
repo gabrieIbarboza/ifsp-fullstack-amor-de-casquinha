@@ -1,6 +1,17 @@
 <?php
 
 session_start();
+require_once 'userMock.php';
+$isLoggedIn = isset($_SESSION["userEmail"]);
+if($isLoggedIn)
+{
+    $cep = $_SESSION["userCep"];
+    $rua = $_SESSION["userRua"];
+    $num = $_SESSION["userNum"];
+    $compl = $_SESSION["userCompl"];
+    $bairro = $_SESSION["userBairro"];
+
+}
 
 if(isset($_SESSION["cartArray"]))
 {
@@ -48,6 +59,31 @@ if(isset($_SESSION["cartArray"]))
         <p>R$ '.$total.'</p>
     </div>
     ';
+
+    //Needs styling @jessi
+    if($isLoggedIn)
+    {
+        echo '
+        <form action="sobre.php" method="post">
+            <input name="ckbIsDelivery" id="ckbIsDelivery" type="checkbox" checked=true>
+            <label for="ckbIsDelivery" id="labelForCkbIsDelivery">O pedido será entregue no seu endereço!</label>
+            <div id="addressDiv">
+                <input name="inpCep" id="inpCep" type="text" value="'.$cep.'" maxlength="20" placeholder="CEP">
+                <input name="inpRua" id="inpRua" type="text" value="'.$rua.'" maxlength="100" placeholder="Rua">
+                <input name="inpNum" id="inpNum" type="number" value="'.$num.'" min=0>
+                <input name="inpCompl" id="inpCompl" type="text" value="'.$compl.'" maxlength="15" placeholder="Complemento">
+                <input name="inpBairro" id="inpBairro" type="text" value="'.$bairro.'" maxlength="45" placeholder="Bairro">
+            </div>
+            <input name="btnSubmit" id="btnSubmit" type="submit" value="Concluir Pedido">
+        </form>
+        ';
+    }
+    else
+    {
+        echo '
+        <button id="btnGoToLogin">Fazer Login para Concluir Pedido</button>
+        ';
+    }
 }
 else
 {

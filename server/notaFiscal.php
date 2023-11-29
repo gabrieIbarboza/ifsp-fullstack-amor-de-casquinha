@@ -25,5 +25,6 @@
     <?php
         include_once 'components/footer.php';
     ?>
+    <script src="script/notaFiscal.js"></script>
 </body>
 </html>
