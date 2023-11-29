@@ -946,16 +946,26 @@ call SP_PedidoReadByStatus(
 
 -- FRONTEND TEST
 call SP_ProdutoCreate(
-    'Sorvete em Bola', 'Bola', 'images/sorveteBolaDesktop.png'
+    'Sorvete em Bola', 'Bola', 'images/sorveteBola'
 );
 call SP_ProdutoCreate(
-    'Picolé', 'Picolé', 'images/picoleDesktop.png'
+    'Picolé', 'Picolé', 'images/picole'
 );
-call SP_ProdutoReadAllActive(1000,0);
-call SP_ProdutoUpdate(
-	'Açaí', 'Açaí', 'Açaí', 'images/sorvetePoteDesktop.png', 1
+call SP_VariacaoCreate(
+	'Bola de Morango', 3, 'img/bolamorango.png', 'Sorvete em Bola'
 );
-call SP_VariacaoReadById(1);
+call SP_VariacaoCreate(
+	'Bola de Céu Azul', 15, 'img/bolazul.png', 'Sorvete em Bola'
+);
+call SP_VariacaoCreate(
+	'Picolé de Manga', 1.99, 'img/picoleManga.png', 'Picolé'
+);
+call SP_VariacaoCreate(
+	'Picolé de Limão', 1.99, 'img/picoleLimao.png', 'Picolé'
+);
+call SP_VariacaoCreate(
+	'Picolé de Morango', 1.99, 'img/picoleMorango.png', 'Picolé'
+);
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
