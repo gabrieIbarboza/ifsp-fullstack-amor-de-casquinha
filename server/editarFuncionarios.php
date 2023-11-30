@@ -32,7 +32,7 @@
                 <input type="text" id="senha1" name="senhaFunAdd" placeholder="Senha">
                 <button type="submit">Salvar</button>
             </form>
-            <div class="conteiner1">
+            <class="conteiner1">
                 
                 <div class="c1">
                     <div class="c2">
@@ -65,8 +65,13 @@
                         <button id="edit">Editar</button>
                     </div>
                 </div>
+
                 
-            </div>
+                <div>
+                    <?php
+                        include_once 'config/getFunc.php';
+                    ?>
+                </div>
             <button class="voltar"><a href="index.html">Voltar</a></button>
         </div>
     </main>
