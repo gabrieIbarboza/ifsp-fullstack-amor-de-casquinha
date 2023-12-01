@@ -9,33 +9,43 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="style/CabecalhoRodape.css">
     <link rel="stylesheet" href="style/loginS.css">
+    <link rel="stylesheet" href="style/forms.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
     <?php
         include_once 'components/nav.php';
     ?>
-    <header class="text-center">
-        <div class="titulo d-flex align-items-center justify-content-center flex-column">
+    <header class="text-center registro">
+    <div class="titulo d-flex align-items-center justify-content-center flex-column">
             <h3>Crie sua conta!</h3>
             <img src="images/Rectangle 1.png">
         </div>
     </header>
     <main class="flex-grow-1 d-flex justify-content-center align-items-center">
     <form action="" method="post" class="d-flex flex-column my-4 formu">
-        <input type="text" name="nome" class="form-control" placeholder="Nome" required>
-        <input type="text" name="email" class="form-control" placeholder="Email" required>
-        <input type="text" name="telefone" class="form-control" placeholder="Telefone" required>
-        <input type="text" name="cep" class="form-control" placeholder="CEP" required>
-        <input type="text" name="rua" class="form-control" placeholder="Rua" required>
-        <input type="text" name="bairro" class="form-control" placeholder="Bairro" required>
-        <input type="text" name="numero" class="form-control" placeholder="Número do Endereço" required>
-        <input type="password" name="senha" class="form-control" placeholder="Senha" required>
+        <input type="text" name="nome" placeholder="Nome" required>
+        <input type="text" name="email" placeholder="Email" required>
+        <input type="text" name="telefone" placeholder="Telefone" required>
+        <input type="text" name="cep" placeholder="CEP" required>
+        <input type="text" name="rua" placeholder="Rua" required>
+        <input type="text" name="bairro" placeholder="Bairro" required>
+        <input type="number" name="numero" placeholder="Número do Endereço" required>
+        <input type="password" name="senha" placeholder="Senha" required>
         <input type="submit" value="Registre-se" class="btn btn-primary mt-3">
     </form>
 </main>
 
-    <?php
-      /* include_once 'components/footer.php';*/
-    ?>
+<footer>
+        <div class="conteiner-fluid d-flex justify-content-center rodape align-items-center flex-column">
+            <div class="d-flex flex-row justify-content-around align-items-center">
+                <img src="images/image 1.png" alt="Logo Amor de Casquinha" class="pe-4 logo">
+                <h3>Amor de Casquinha</h3>
+            </div>
+            <img src="images/Rectangle 1048.png" class="pt-3 linha">
+            <div class="text-center">
+                <p> &copy; 2023 Amor de Casquinha Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

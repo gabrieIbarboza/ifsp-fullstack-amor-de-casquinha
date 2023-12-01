@@ -18,7 +18,6 @@ main{
     font-family: var(--Nunito);
     font-size: 1.25rem;
     font-weight: bold;
-    margin-top: 10%;
 }
 
 .formu input[type=text]{
@@ -40,6 +39,7 @@ main{
     border-radius: 45px;
     margin-top: 40px;
     border: none;
+    color: black;
 }
 
 @media (min-width: 768px) {

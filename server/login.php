@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="style/CabecalhoRodape.css">
     <link rel="stylesheet" href="style/loginS.css">
+    <link rel="stylesheet" href="style/forms.css">
 </head>
 <body>
     <!-- Estilização check -->
@@ -27,16 +28,16 @@
             </div>
         </div>
     </nav>
-    <header>
+    <header class="login">
         <div class="titulo d-flex align-items-center justify-content-center flex-column">
             <h3>Login</h3><img src="images/Rectangle 1.png">
         </div>
     </header>
     <main>
         <div class="d-flex justify-content-center align-items-center">
-            <form action="" method="post" class="d-flex flex-column my-4 formu">
-                <input type="text" name="usuario" placeholder="Usuário">
-                <input type="text" name="senha" placeholder="Senha">
+            <form action="" method="post" class="d-flex flex-column formu">
+                <input type="email" name="email" placeholder="E-mail">
+                <input type="password" name="senha" placeholder="Senha">
                 <input type="submit" value="Login">
             </form>
         </div>
