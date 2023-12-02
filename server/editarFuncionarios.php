@@ -47,7 +47,7 @@
                                     <p>Celular:</p>
                                 </div>
                             </div>
-                            <form action="config/updateFunc.php" method="POST" id="formulario" class="formulario">
+                            <!-- <form action="config/updateFunc.php" method="POST" id="formulario" class="formulario">
                                 <label for="nome2">Nome:</label>
                                 <input type="text" id="nome2" name="nomeFunEdt" placeholder="Nome">
                                 <label for="email2">Email:</label>
@@ -57,12 +57,12 @@
                                 <label for="senha2">Senha:</label>
                                 <input type="text" id="senha2" name="senhaFunEdt" placeholder="Senha">
                                 <button type="submit">Salvar</button>
-                            </form>
+                            </form> -->
                         </div>
                     </div>
                     <div class="botao text-center d-flex justify-content-evenly mt-3">
                         <button id="excl">Excluir</button>
-                        <button id="edit">Editar</button>
+                        <!-- <button id="edit">Editar</button> -->
                     </div>
                 </div>
 
@@ -80,9 +80,9 @@
         include_once 'components/footer.php';
     ?>
     
-    <script src="script/header.js"></script>
+    <!-- <script src="script/header.js"></script> -->
     <script src="script/adicionar.js"></script>
-    <script src="script/editar.js"></script>
+    <!-- <script src="script/editar.js"></script> -->
     
 </body>
 </html>

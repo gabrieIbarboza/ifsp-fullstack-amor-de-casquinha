@@ -11,6 +11,9 @@ $stmt->execute();
 do {
     while ($row = $stmt->fetch()) 
     {
+        
+        $redirectToEditar = 'editFunc.php?funcionario='.$row['idFuncionario'];
+        $redirectToExcluir = 'excluirFunc.php?funcionario='.$row['idFuncionario'];
         echo '<div class="c1">
         <div class="c2">
             <div class="c3">
@@ -30,8 +33,8 @@ do {
             </div>        
         </div>
         <div class="botao text-center d-flex justify-content-evenly mt-3">
-            <button id="excl">Excluir</button>
-            <button id="edit">Editar</button>
+            <button><a href="'.$redirectToEditar.'">Editar</a></button>        
+            <button><a href="'.$redirectToExcluir.'">Excluir</a></button>        
         </div>
         </div>';
     }
