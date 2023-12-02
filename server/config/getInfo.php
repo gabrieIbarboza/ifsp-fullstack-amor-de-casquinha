@@ -9,7 +9,7 @@ $complemento = $_POST["complemento"];
 $bairro = $_POST["bairro"];
 $nome = $_POST["nome"];
 $email = $_POST["email"];
-$senha = $_POST["senha"];
+$senha = password_hash($_POST["senha"], PASSWORD_DEFAULT);
 $telefone = $_POST["telefone"];
 
 $stmt = $conn->prepare("CALL SP_ClienteCreate(?, ?, ?, ?, ?, ?, ?, ?, ?)");
@@ -26,8 +26,7 @@ $stmt->execute();
 
 do{
     while($row = $stmt->fetch()){
-
-        if($row['status'] == '201'){
+        if($row['Status'] == '201'){
             session_start();
             $_SESSION["cepEnd"] = $cepEnd;
             $_SESSION["ruaEnd"] = $rua;
@@ -39,12 +38,12 @@ do{
             $_SESSION["senhaClie"] = $senha;
             $_SESSION["telefoneClie"] = $telefone;
 
-            header('location: sobre.html');
+            header('location: ../sobre.html');
 
 
-        } else if ($row['status'] == '403') {
-            echo 'alert(E-mail já cadastrado! Faça login!)';
-            header('location: login.php');
+        } else if ($row['Status'] == '403') {
+            echo '<script>alert("E-mail já cadastrado! Faça login!");</script>';
+            header('location: ../login.php');
         }
     }
 }while ($stmt->nextRowset());

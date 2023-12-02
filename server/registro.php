@@ -22,11 +22,11 @@
         </div>
     </header>
     <main class="flex-grow-1 d-flex justify-content-center align-items-center">
-    <form action="getInfo.php" method="post" class="d-flex flex-column my-4 formu">
+    <form action="config/getInfo.php" method="post" class="d-flex flex-column my-4 formu">
         <input type="text" name="nome" maxlength="50" placeholder="Nome" required>
         <input type="email" name="email" maxlength="60" placeholder="Email" required>
-        <input type="tel" name="telefone" pattern="\([0-9]{2}\)[0-9]{5}-[0-9]{4}" maxlength="25" placeholder="Telefone" required>
-        <input type="text" name="cep" pattern="[0-9]{5}-[0-9]{3}" maxlength="20" placeholder="CEP" required>
+        <input type="tel" name="telefone" <?php //pattern="\([0-9]{2}\)[0-9]{5}-[0-9]{4}" ?> maxlength="25" placeholder="Telefone" required>
+        <input type="text" name="cep" <?php //pattern="[0-9]{5}-[0-9]{3}" ?> maxlength="20" placeholder="CEP" required>
         <input type="text" name="rua" maxlength="100" placeholder="Rua" required>
         <input type="text" name="bairro" maxlength="45" placeholder="Bairro" required>
         <input type="number" name="numero" placeholder="Número do Endereço" required>

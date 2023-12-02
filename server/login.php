@@ -1,3 +1,30 @@
+<!-- 
+    Redireciona forms com POST
+    Pega email e senha digitados
+    call SP_ClienteReadByEmail(?);
+    if(isset($row['Status']))
+    {
+        if($row['Status'] == 403)
+        {
+            echo "errado"
+        }
+    }
+    else
+    {
+        if(password_verify($senhadigitada, $row['senhaCliente']))
+        {
+            echo 'Logou';
+        }
+        else
+        {
+            echo 'senha incorreta';
+        }
+    }
+TRUE OR FALSE = password_verify($password, $row['senha']); 
+
+
+
+-->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -36,8 +63,8 @@
     <main style="padding-top: 20px">
         <div class="d-flex justify-content-center align-items-center">
             <form action="" method="post" class="d-flex flex-column formu">
-                <input type="email" name="email" placeholder="E-mail">
-                <input type="password" name="senha" placeholder="Senha">
+                <input type="email" name="email" placeholder="E-mail" required>
+                <input type="password" name="senha" placeholder="Senha" required>
                 <input type="submit" value="Login">
             </form>
         </div>
