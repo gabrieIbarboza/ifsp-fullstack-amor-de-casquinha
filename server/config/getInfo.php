@@ -42,9 +42,13 @@ do{
 
 
         } else if ($row['Status'] == '403') {
-            echo '<script>alert("E-mail já cadastrado! Faça login!");</script>';
-            header('location: ../login.php');
-        }
+                echo '<script>';
+                echo 'alert("E-mail já cadastrado! Faça login!");';
+                echo 'window.location.href = "../login.php";';
+                echo '</script>';
+                exit;
+            }
+            
     }
 }while ($stmt->nextRowset());
 
