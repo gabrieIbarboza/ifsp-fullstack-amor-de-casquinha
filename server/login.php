@@ -28,12 +28,12 @@
             </div>
         </div>
     </nav>
-    <header class="login">
+    <header class="login" style="margin: 200px auto 0px auto">
         <div class="titulo d-flex align-items-center justify-content-center flex-column">
             <h3>Login</h3><img src="images/Rectangle 1.png">
         </div>
     </header>
-    <main>
+    <main style="padding-top: 20px">
         <div class="d-flex justify-content-center align-items-center">
             <form action="" method="post" class="d-flex flex-column formu">
                 <input type="email" name="email" placeholder="E-mail">

@@ -1,0 +1,53 @@
+<?php
+
+require_once 'config.php';
+
+$cepEnd = $_POST["cep"];
+$rua = $_POST["rua"];
+$numero = $_POST["numero"];
+$complemento = $_POST["complemento"];
+$bairro = $_POST["bairro"];
+$nome = $_POST["nome"];
+$email = $_POST["email"];
+$senha = $_POST["senha"];
+$telefone = $_POST["telefone"];
+
+$stmt = $conn->prepare("CALL SP_ClienteCreate(?, ?, ?, ?, ?, ?, ?, ?, ?)");
+$stmt->bindParam(1, $cepEnd);
+$stmt->bindParam(2, $rua);
+$stmt->bindParam(3, $numero);
+$stmt->bindParam(4, $complemento);
+$stmt->bindParam(5, $bairro);
+$stmt->bindParam(6, $nome);
+$stmt->bindParam(7, $email);
+$stmt->bindParam(8, $senha);
+$stmt->bindParam(9, $telefone);
+$stmt->execute();
+
+do{
+    while($row = $stmt->fetch()){
+
+        if($row['status'] == '201'){
+            session_start();
+            $_SESSION["cepEnd"] = $cepEnd;
+            $_SESSION["ruaEnd"] = $rua;
+            $_SESSION["numeroEnd"] = $numero;
+            $_SESSION["complementoEnd"] = $complemento;
+            $_SESSION["bairroEnd"] = $bairro;
+            $_SESSION["nomeClie"] = $nome;
+            $_SESSION["emailClie"] = $email;
+            $_SESSION["senhaClie"] = $senha;
+            $_SESSION["telefoneClie"] = $telefone;
+
+            header('location: sobre.html');
+
+
+        } else if ($row['status'] == '403') {
+            echo 'alert(E-mail já cadastrado! Faça login!)';
+            header('location: login.php');
+        }
+    }
+}while ($stmt->nextRowset());
+
+
+?>

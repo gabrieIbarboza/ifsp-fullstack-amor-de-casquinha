@@ -15,27 +15,29 @@
     <?php
         include_once 'components/nav.php';
     ?>
-    <header class="text-center registro">
+    <header class="text-center registro" style="margin: 200px auto 150px auto">
     <div class="titulo d-flex align-items-center justify-content-center flex-column">
             <h3>Crie sua conta!</h3>
             <img src="images/Rectangle 1.png">
         </div>
     </header>
     <main class="flex-grow-1 d-flex justify-content-center align-items-center">
-    <form action="" method="post" class="d-flex flex-column my-4 formu">
-        <input type="text" name="nome" placeholder="Nome" required>
-        <input type="text" name="email" placeholder="Email" required>
-        <input type="text" name="telefone" placeholder="Telefone" required>
-        <input type="text" name="cep" placeholder="CEP" required>
-        <input type="text" name="rua" placeholder="Rua" required>
-        <input type="text" name="bairro" placeholder="Bairro" required>
+    <form action="getInfo.php" method="post" class="d-flex flex-column my-4 formu">
+        <input type="text" name="nome" maxlength="50" placeholder="Nome" required>
+        <input type="email" name="email" maxlength="60" placeholder="Email" required>
+        <input type="tel" name="telefone" pattern="\([0-9]{2}\)[0-9]{5}-[0-9]{4}" maxlength="25" placeholder="Telefone" required>
+        <input type="text" name="cep" pattern="[0-9]{5}-[0-9]{3}" maxlength="20" placeholder="CEP" required>
+        <input type="text" name="rua" maxlength="100" placeholder="Rua" required>
+        <input type="text" name="bairro" maxlength="45" placeholder="Bairro" required>
         <input type="number" name="numero" placeholder="Número do Endereço" required>
-        <input type="password" name="senha" placeholder="Senha" required>
+        <input type="text" name="complemento" maxlength="15" placeholder="Complemento" required>
+        <input type="password" name="senha" maxlength="255" placeholder="Senha" required>
         <input type="submit" value="Registre-se" class="btn btn-primary mt-3">
+
     </form>
 </main>
 
-<footer>
+<footer class="registro">
         <div class="conteiner-fluid d-flex justify-content-center rodape align-items-center flex-column">
             <div class="d-flex flex-row justify-content-around align-items-center">
                 <img src="images/image 1.png" alt="Logo Amor de Casquinha" class="pe-4 logo">
@@ -46,6 +48,6 @@
                 <p> &copy; 2023 Amor de Casquinha Todos os direitos reservados</p>
             </div>
         </div>
-    </footer>
+</footer>
 </body>
 </html>
