@@ -12,7 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="style/CabecalhoRodape.css">
-    <!-- <link rel="stylesheet" href="style/editarFuncionariosS.css"> -->
+    <link rel="stylesheet" href="style/editFuncS.css">
 </head>
 <body>
     
@@ -24,7 +24,7 @@
             <h1>Editar Funcionários</h1>
     
         <div class="conteiner">
-            <class="conteiner1">
+            <div class="conteiner1">
                 
                 <div class="c1">
                     <div class="c2">
@@ -49,9 +49,9 @@
                         }
                             
                         ?>
-                        </div>
                     </div>
                 </div>
+            </div>
             <button class="voltar"><a href="editarFuncionarios.php">Voltar</a></button>
         </div>
     </main>
@@ -60,6 +60,6 @@
         include_once 'components/footer.php';
     ?>
     
-    <!-- <script src="script/header.js"></script> -->
+    <script src="script/header.js"></script>
 </body>
 </html>
