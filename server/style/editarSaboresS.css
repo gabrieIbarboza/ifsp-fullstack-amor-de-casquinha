@@ -115,7 +115,14 @@ main{
     display: flex !important;
     flex-direction: column;
 }
+
 form input{
+    padding-left: 4px;
+    border-radius: 10px;
+    border: 2px solid rgb(167, 167, 167);
+}
+
+form #sele{
     padding-left: 4px;
     border-radius: 10px;
     border: 2px solid rgb(167, 167, 167);
@@ -130,6 +137,7 @@ form button[type=submit]{
 form{
     display: none;
 }
+
 
 @media (min-width: 768px) {
     
