@@ -1,5 +1,6 @@
 <?php 
+session_start();
 $_SESSION['user'] = 1; 
-$_SESSION['email'] = "funcionario@gmail.com"; 
+$_SESSION['email'] = "jessicab@amornacasquinha.com"; 
 
 ?>
