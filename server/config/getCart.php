@@ -43,6 +43,7 @@ if(isset($_SESSION["cartArray"]))
         $nome = $cartItem["nome"];
         $preco = $cartItem["preco"];
         $foto = $cartItem["foto"];
+        $qntd = $cartItem["qntd"];
 
         echo '<div class="c1">
         <div class="row">
@@ -59,21 +60,21 @@ if(isset($_SESSION["cartArray"]))
         </div>
         <div class="botao text-center d-flex justify-content-evenly mt-3 flex-row row">
             <div class="col col-3 d-flex align-items-start excl">
-                <button id="'.$id.'" class="b-excluir">Excluir</button>
+                <a href="config/removeCart.php?item='.$id.'" class="b-excluir">Excluir</a>
             </div>
             <div class="col d-flex align-items-start col-7">
                 <p>Quantid.</p>
                 <select id="select'.$id.'" name="select'.$id.'">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
+                    <option value="1" '.(($qntd==1)?'selected':'').'>1</option>
+                    <option value="2" '.(($qntd==2)?'selected':'').'>2</option>
+                    <option value="3" '.(($qntd==3)?'selected':'').'>3</option>
+                    <option value="4" '.(($qntd==4)?'selected':'').'>4</option>
+                    <option value="5" '.(($qntd==5)?'selected':'').'>5</option>
+                    <option value="6" '.(($qntd==6)?'selected':'').'>6</option>
+                    <option value="7" '.(($qntd==7)?'selected':'').'>7</option>
+                    <option value="8" '.(($qntd==8)?'selected':'').'>8</option>
+                    <option value="9" '.(($qntd==9)?'selected':'').'>9</option>
+                    <option value="10" '.(($qntd==10)?'selected':'').'>10</option>
                 </select>
             </div>
         </div>

@@ -1,4 +1,6 @@
 <?php
+include_once("userMock.php");
+
 $email = $_SESSION["userEmail"];
 $recordsLimit = 1000;
 $recordsOffset = 0;
@@ -15,7 +17,7 @@ do {
         <p>Número do Pedido: '.$row['idPedido'].'</p>
         <p>Realizado em: '.$row['dataPedido'].'</p>
         <p>Total: R$'.$row['totalPedido'].'</p>
-        <p>'.($row['isDelivery']==1)?'É para entrega!':'É para buscar na sorveteria!'.'</p>
+        <p>'.(($row['isDelivery']==1)?'É para entrega!':'É para buscar na sorveteria!').'</p>
         <p>Status: '.$row['statusPedido'].'</p>
         <hr/>
         ';

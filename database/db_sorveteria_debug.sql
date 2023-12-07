@@ -222,7 +222,11 @@ call SP_VariacaoCreate(
 call SP_VariacaoCreate(
 	'Picolé de Morango', 1.99, 'img/picoleMorango.png', 'Picolé'
 );
-call SP_ClienteCreate(
+CALL SP_PedidoCreate(NOW(), 0, 'clienteteste@gmail.com', 4);
+call SP_PedidoReadByCliente(
+	'clienteteste@gmail.com', 1000, 0
+);
+/*call SP_ClienteCreate(
 	cepEnd varchar(20), ruaEnd varchar(100), numeroEnd int, complementoEnd varchar(15), bairroEnd varchar(45),
     nomeClie varchar(50), emailClie varchar(60), senhaClie varchar(255), telefoneClie varchar(25)
 );
@@ -234,7 +238,7 @@ call SP_ProdutoPedidoCreate(
 );
 call SP_PedidoUpdate(
 	idP int, dataP datetime, isDeliveryP tinyint, statusP varchar(20), funcionario int, endereco int
-);
+);*/
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;

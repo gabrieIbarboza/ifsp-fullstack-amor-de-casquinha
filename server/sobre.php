@@ -1,45 +1,5 @@
 <?php
-session_start();
-require_once 'config/config.php';
-
-if(isset($_POST["notaFiscal"]) && isset($_SESSION["cartArray"]))
-{
-    //Criar pedido
-    $isDelivery = (isset($_POST["ckbIsDelivery"]) == true) ? 1 : 0;
-    $email = $_SESSION["userEmail"];
-    $id_endereco = ($isDelivery == 1 ) ? $_SESSION["userEnderecoId"] : null;
-
-    $stmt = $conn->prepare("CALL SP_PedidoCreate(NOW(), ?, ?, ?)");
-    $stmt->bindParam(1, $isDelivery);
-    $stmt->bindParam(2, $email);
-    $stmt->bindParam(3, $id_endereco);
-    $stmt->execute();
-
-    do {
-        while ($row = $stmt->fetch()) 
-        {
-            if($row["Status"] == 201) // HTTP Code para Created
-            {
-                //Pega Id do pedido criado
-                $pedidoId = $row["Body"];
-                
-                //Para cada variacao no carrinho, criar um item no pedido
-                foreach ($_SESSION["cartArray"] as $variacaoId => $cartItem) {
-
-                    $variacaoQntd = $cartItem["qntd"];
-                    
-                    $stmt = $conn->prepare("CALL SP_ProdutoPedidoCreate(?, ?, ?)");
-                    $stmt->bindParam(1, $pedidoId);
-                    $stmt->bindParam(2, $variacaoId);
-                    $stmt->bindParam(3, $variacaoQntd);
-                    $stmt->execute();
-                }
-
-                unset($_SESSION["cartArray"]); // Limpa carrinha, pois já cadastrou pedido e itens no banco de dados
-            }
-        }
-    } while ($stmt->nextRowset());
-}
+    include_once 'config/createPedido.php';
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
