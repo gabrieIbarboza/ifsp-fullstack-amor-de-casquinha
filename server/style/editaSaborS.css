@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Nunito:wght@400;700&display=swap');
+
+:root{
+    --roxo-bebe: #D4C7FF;
+    --Nunito: 'Nunito', sans-serif;
+    --Agbalumo: 'Agbalumo';
+    --azul-bebe: #C9EFFF;
+    --rosa-bebe: #FFC7E8;
+    --amarelo-bebe: #FFFAC7;
+    --verde-bebe: #E2FFC7;
+}
+
+.conteiner2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: calc(100vh - 180px);
+}
+
+.conteiner2 form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.conteiner2 form input{
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(196, 193, 193);
+    padding-left: 10px;
+}
+
+.conteiner2 form button[type=submit]{
+    border: none;
+    border-radius: 20px;
+    background-color: var(--azul-bebe);
+    margin: 20px 0;
+}
+
+main .aviso{
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .conteiner2 form{
+        width: 25%;
+    }
+
+    .conteiner2 form input{
+        height: 40px;
+    }
+    
+    .conteiner2 form button[type=submit]{
+        width: 100px;
+        height: 40px;
+        margin: 20px auto;
+    }
+}
