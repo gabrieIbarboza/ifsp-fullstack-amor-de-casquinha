@@ -1,6 +1,6 @@
 <footer>
-    <div class="conteiner-fluid d-flex justify-content-center rodape align-items-center flex-column">
-        <div class="d-flex flex-row justify-content-around align-items-center">
+    <div class="container-fluid d-flex justify-content-center rodape flex-column">
+        <div class="d-flex flex-row justify-content-around align-items-center mb-3">
             <img src="images/image 1.png" alt="Logo Amor de Casquinha" class="pe-4 logo">
             <h3>Amor de Casquinha</h3>
         </div>
