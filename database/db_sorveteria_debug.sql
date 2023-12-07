@@ -149,15 +149,16 @@ call SP_VariacaoReadAllActive (
 
 -- CRUD PEDIDO // TESTE FINAL E END TO END
 call SP_ClienteCreate(
-	'00000-777', 'Minha Rua', 123, 'CS 03', 'Meu Bairro',
-    'Cliente Teste', 'teste@gmail.com', 'senhacomhash123', '(11) 99999-9999'
+	'00000-777', 'Minha Rua', 123, 'Apt 72', 'Bairro Povão',
+    'Cliente Teste', 'clienteteste@gmail.com', 'senhacomhash123', '(11) 99999-9999'
 );
 call SP_ClienteReadByEmail(
-	'teste@gmail.com'
+	'clienteteste@gmail.com'
 );
 call SP_PedidoCreate(
 	NOW(), 1, 'teste@gmail.com', 1
 );
+select * from tbPedido;
 call SP_PedidoReadByCliente(
 	'teste@gmail.com', 1000, 0
 );
@@ -187,6 +188,9 @@ call SP_PedidoReadByStatus(
 );
 call SP_FuncionarioReadByEmail(
 	'teste@amornacasquinha.com'
+);
+call SP_PedidoReadByCliente (
+	'clienteteste@gmail.com', 1000, 0
 );
 call SP_PedidoUpdate(
 	1, '2023-11-19 22:17:59', 1, 'Recebido', 1, 1

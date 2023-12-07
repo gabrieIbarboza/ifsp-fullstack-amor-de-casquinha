@@ -1,3 +1,31 @@
+<?php
+session_start();
+if(isset($_POST["cart"]) && isset($_SESSION["cartArray"]))
+{
+    //Pegando no POST a quantidade selecionada de cada item do carrinho e atualizando na SESSION
+    foreach ($_SESSION["cartArray"] as $variacaoId => $cartItem) {
+        
+        $id = $variacaoId;
+        $nome = $cartItem["nome"];
+        $preco = $cartItem["preco"];
+        $foto = $cartItem["foto"];
+        $qntd = $cartItem["qntd"];
+
+        if(isset($_POST["select".$id]))
+        {
+            $qntd = $_POST["select".$id]; //atualiza qntd com POST
+        }
+
+        // Atualiza dados na SESSION
+        $_SESSION["cartArray"][$id] = array (
+            "nome" => $nome,
+            "preco" => $preco,
+            "foto" => $foto,
+            "qntd" => $qntd
+        );
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

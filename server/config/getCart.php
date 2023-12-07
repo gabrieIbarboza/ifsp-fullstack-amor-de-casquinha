@@ -63,7 +63,7 @@ if(isset($_SESSION["cartArray"]))
             </div>
             <div class="col d-flex align-items-start col-7">
                 <p>Quantid.</p>
-                <select name="selecao">
+                <select id="select'.$id.'" name="select'.$id.'">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -79,7 +79,7 @@ if(isset($_SESSION["cartArray"]))
         </div>
         </div>';
     }
-    echo '<button class="conc"><a href="notaFiscal.php">Concluir</a></button>';
+    echo '<input class="conc" type="submit" value="Concluir"/>';
 }
 else
 {

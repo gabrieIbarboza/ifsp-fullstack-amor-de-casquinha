@@ -1,6 +1,5 @@
 <?php
 
-session_start();
 require_once 'userMock.php';
 $isLoggedIn = isset($_SESSION["userEmail"]);
 if($isLoggedIn)
@@ -10,7 +9,6 @@ if($isLoggedIn)
     $num = $_SESSION["userNum"];
     $compl = $_SESSION["userCompl"];
     $bairro = $_SESSION["userBairro"];
-
 }
 
 if(isset($_SESSION["cartArray"]))
@@ -42,9 +40,6 @@ if(isset($_SESSION["cartArray"]))
                 </div>
             </div>
             <div class="botao text-center d-flex justify-content-between mt-3 flex-row">
-                <div class="excl">
-                    <button id="'.$id.'" class="b-excluir">Excluir</button>
-                </div>
                 <div>
                     <p>Quantidade: '.$qntd.'</p>
                 </div>
@@ -68,12 +63,9 @@ if(isset($_SESSION["cartArray"]))
             <input name="ckbIsDelivery" id="ckbIsDelivery" type="checkbox" checked=true>
             <label for="ckbIsDelivery" id="labelForCkbIsDelivery">O pedido será entregue no seu endereço!</label>
             <div id="addressDiv">
-                <input name="inpCep" id="inpCep" type="text" value="'.$cep.'" maxlength="20" placeholder="CEP">
-                <input name="inpRua" id="inpRua" type="text" value="'.$rua.'" maxlength="100" placeholder="Rua">
-                <input name="inpNum" id="inpNum" type="number" value="'.$num.'" min=0>
-                <input name="inpCompl" id="inpCompl" type="text" value="'.$compl.'" maxlength="15" placeholder="Complemento">
-                <input name="inpBairro" id="inpBairro" type="text" value="'.$bairro.'" maxlength="45" placeholder="Bairro">
+                '.$cep.' - '.$rua.', '.$num.', '.$compl.' - '.$bairro.'
             </div>
+            <input type="hidden" name="notaFiscal" value="1">
             <input name="btnSubmit" id="btnSubmit" type="submit" value="Concluir Pedido">
         </form>
         ';

@@ -1,3 +1,46 @@
+<?php
+session_start();
+require_once 'config/config.php';
+
+if(isset($_POST["notaFiscal"]) && isset($_SESSION["cartArray"]))
+{
+    //Criar pedido
+    $isDelivery = (isset($_POST["ckbIsDelivery"]) == true) ? 1 : 0;
+    $email = $_SESSION["userEmail"];
+    $id_endereco = ($isDelivery == 1 ) ? $_SESSION["userEnderecoId"] : null;
+
+    $stmt = $conn->prepare("CALL SP_PedidoCreate(NOW(), ?, ?, ?)");
+    $stmt->bindParam(1, $isDelivery);
+    $stmt->bindParam(2, $email);
+    $stmt->bindParam(3, $id_endereco);
+    $stmt->execute();
+
+    do {
+        while ($row = $stmt->fetch()) 
+        {
+            if($row["Status"] == 201) // HTTP Code para Created
+            {
+                //Pega Id do pedido criado
+                $pedidoId = $row["Body"];
+                
+                //Para cada variacao no carrinho, criar um item no pedido
+                foreach ($_SESSION["cartArray"] as $variacaoId => $cartItem) {
+
+                    $variacaoQntd = $cartItem["qntd"];
+                    
+                    $stmt = $conn->prepare("CALL SP_ProdutoPedidoCreate(?, ?, ?)");
+                    $stmt->bindParam(1, $pedidoId);
+                    $stmt->bindParam(2, $variacaoId);
+                    $stmt->bindParam(3, $variacaoQntd);
+                    $stmt->execute();
+                }
+
+                unset($_SESSION["cartArray"]); // Limpa carrinha, pois já cadastrou pedido e itens no banco de dados
+            }
+        }
+    } while ($stmt->nextRowset());
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -15,6 +58,7 @@
         include_once 'components/header.php';
     ?>
     <main>
+        <!-- TODO: Puxar dados do cliente com $_SESSION -->
         <div class="conteiner1 conteiner d-flex align-items-center flex-column w-75 p-4 my-3">
             <div class="c1">
                 <div class="d-flex justify-content-center m-2"><img src="images/funcionario1.png" alt="" ></div>
@@ -40,33 +84,9 @@
 
         <div class="conteiner1 conteiner d-flex align-items-center flex-column w-75 p-4 my-3">
             <h3>Meus pedidos</h3>
-            <div class="c1">
-                <div class="d-flex flex-row">
-                    <div class="c2">
-                        <img src="images/picoleCoco.png" alt="Picolé sabor coco" class="imagem">
-                    </div>
-                    <div class="d-flex flex-column c3 ps-2">
-                        <h3>Nestlé La Frutta Coco</h3>
-                        <div class="preco d-flex flex-row justify-content-between">
-                            <p>Preço</p>
-                            <span>R$ 1,50</span>
-                            
-                        </div>
-                        <div>
-                            <p>Endereço: </p>
-                            <p>Cliente: </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="botao text-center d-flex justify-content-between mt-3 flex-row">
-                        <div class="excl">
-                            <button id="excl">Excluir</button>
-                        </div>
-                        <div>
-                            <p>Quantidade: 1</p>
-                        </div>
-                </div>
-            </div>
+            <?php
+                include_once "config/getPedidos.php";
+            ?>
         </div>
     </main>
     <?php

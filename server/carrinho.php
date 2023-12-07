@@ -17,11 +17,12 @@
     <main>
         <h1 class="m-auto text-center pt-4 pb-4">Carrinho</h1>
         <div class="conteiner d-flex flex-column align-items-center">
-            <div class="container-fluid d-flex flex-column align-items-center conteiner1">
+            <form method="post" action="notaFiscal.php" class="container-fluid d-flex flex-column align-items-center conteiner1">
+                <input type="hidden" name="cart" value="1">
                 <?php
                     include_once 'config/getCart.php';
                 ?>
-            </div>
+            </form>
             <button class="voltar"><a href="index.php">Voltar</a></button>
         </div>
     </main>
