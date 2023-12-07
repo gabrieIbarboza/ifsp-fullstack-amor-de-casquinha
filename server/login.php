@@ -1,3 +1,30 @@
+<!-- 
+    Redireciona forms com POST
+    Pega email e senha digitados
+    call SP_ClienteReadByEmail(?);
+    if(isset($row['Status']))
+    {
+        if($row['Status'] == 403)
+        {
+            echo "errado"
+        }
+    }
+    else
+    {
+        if(password_verify($senhadigitada, $row['senhaCliente']))
+        {
+            echo 'Logou';
+        }
+        else
+        {
+            echo 'senha incorreta';
+        }
+    }
+TRUE OR FALSE = password_verify($password, $row['senha']); 
+
+
+
+-->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -9,6 +36,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="style/CabecalhoRodape.css">
     <link rel="stylesheet" href="style/loginS.css">
+    <link rel="stylesheet" href="style/forms.css">
 </head>
 <body>
     <header>
@@ -27,7 +55,7 @@
                 <img src="images/image 2.png" alt="Menu" id="toggleBtn">
             </div>
         </div>
-      </header>
+    </header>
 
         <div class="titulo d-flex align-items-center justify-content-center flex-column">
             <h3>Login</h3><img src="images/Rectangle 1.png">

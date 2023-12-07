@@ -1,4 +1,4 @@
-<?php
+<?php/*
 require 'config.php';
 
 $recordsLimit = 100;
@@ -24,5 +24,5 @@ do {
         </div>';
     }
 } while ($stmt->nextRowset());
-
+*/
 ?>
