@@ -13,12 +13,12 @@
 </head>
 <body>
     <?php
-        include_once 'components/nav.php';
+        include_once 'components/header.php';
     ?>
     <div class="titulo d-flex align-items-center justify-content-center flex-column">
         <h3>Login</h3><img src="images/Rectangle 1.png">
     </div>
-    <main style="padding-top: 20px">
+    <main>
         <div class="d-flex justify-content-center align-items-center">
             <form action="" method="post" class="d-flex flex-column formu">
                 <input type="email" name="email" placeholder="E-mail" required>
@@ -27,7 +27,6 @@
             </form>
         </div>
     </main>
-
     <?php
         include_once 'components/footer.php';
     ?>

@@ -11,41 +11,22 @@
     <link rel="stylesheet" href="style/saboresS.css">
 </head>
 <body>
-    
     <?php
-        include_once 'components/nav.php';
+        include_once 'components/header.php';
     ?>
-
-
-        <h1>Picolé Sabores</h1>
     <main>
+        <h1 class="m-auto text-center pt-4 pb-4">Variações</h1>
         <div class="conteiner d-flex flex-column align-items-center justify-content-center">
             <div class="conteiner1">
-                <div class="c1">
-                    <div class="row">
-                        <div class="col col-4"><img src="images/picoleCoco.png" alt="Picolé sabor coco" class="imagem"></div>
-                        <div class="col">
-                            <h3 class="titulo px-2">Nestlé La Frutta Coco</h3>
-                            <div class="preco d-flex flex-row justify-content-between px-2">
-                                <p>Preço</p>
-                                <span>R$ 1,50</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="botao text-center d-flex justify-content-evenly mt-3">
-                        <button class="add">Adicionar ao Carrinho</button>
-                    </div>
-                </div>      
+                <?php
+                    include_once 'config/getVariacoes.php';
+                ?>      
             </div>
-            <button class="voltar"><a href="index.html">Voltar</a></button>
+            <button class="voltar"><a href="index.php">Voltar</a></button>
         </div>
     </main>
-    
     <?php
         include_once 'components/footer.php';
     ?>
-
-    <script src="script/header.js"></script>
-    
 </body>
 </html>

@@ -1,3 +1,31 @@
+<?php
+session_start();
+if(isset($_POST["cart"]) && isset($_SESSION["cartArray"]))
+{
+    //Pegando no POST a quantidade selecionada de cada item do carrinho e atualizando na SESSION
+    foreach ($_SESSION["cartArray"] as $variacaoId => $cartItem) {
+        
+        $id = $variacaoId;
+        $nome = $cartItem["nome"];
+        $preco = $cartItem["preco"];
+        $foto = $cartItem["foto"];
+        $qntd = $cartItem["qntd"];
+
+        if(isset($_POST["select".$id]))
+        {
+            $qntd = $_POST["select".$id]; //atualiza qntd com POST
+        }
+
+        // Atualiza dados na SESSION
+        $_SESSION["cartArray"][$id] = array (
+            "nome" => $nome,
+            "preco" => $preco,
+            "foto" => $foto,
+            "qntd" => $qntd
+        );
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -11,49 +39,20 @@
     <link rel="stylesheet" href="style/notaFiscalS.css">
 </head>
 <body>
-    
     <?php
-        include_once 'components/nav.php';
+        include_once 'components/header.php';
     ?>
-
     <main>
         <div class="conteiner1 container d-flex flex-column align-items-center">
-            <h3>Pedido N° 4568789</h3>
-                <div class="c1">
-                    <div class="d-flex flex-row">
-                        <div class="c2">
-                            <img src="images/picoleCoco.png" alt="Picolé sabor coco" class="imagem">
-                        </div>
-                        <div class="d-flex flex-column c3 ps-2">
-                            <h3>Nestlé La Frutta Coco</h3>
-                            <div class="preco d-flex flex-row justify-content-between">
-                                <p>Preço</p>
-                                <span>R$ 1,50</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="botao text-center d-flex justify-content-between mt-3 flex-row">
-                        <div class="excl">
-                            <button id="excl">Excluir</button>
-                        </div>
-                        <div>
-                            <p>Quantidade: 1</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="c4">
-                    <h4>Total</h4>
-                    <p>R$ 0,00</p>
-                </div>
+            <h3>Confirmar Pedido?</h3>
+            <?php
+                include_once 'config/getTotal.php';
+            ?>
         </div>
-
     </main>
-    
     <?php
         include_once 'components/footer.php';
     ?>
-
-    <script src="script/header.js"></script>
-    
+    <script src="script/notaFiscal.js"></script>
 </body>
 </html>

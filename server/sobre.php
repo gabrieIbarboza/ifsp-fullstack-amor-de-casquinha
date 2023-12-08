@@ -1,3 +1,6 @@
+<?php
+    include_once 'config/createPedido.php';
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -11,12 +14,11 @@
     <link rel="stylesheet" href="style/sobreS.css">
 </head>
 <body>
-    
     <?php
-        include_once 'components/nav.php';
+        include_once 'components/header.php';
     ?>
-
     <main>
+        <!-- TODO: Puxar dados do cliente com $_SESSION -->
         <div class="conteiner1 conteiner d-flex align-items-center flex-column w-75 p-4 my-3">
             <div class="c1">
                 <div class="d-flex justify-content-center m-2"><img src="images/funcionario1.png" alt="" ></div>
@@ -41,54 +43,15 @@
         </div>
 
         <div class="conteiner1 conteiner d-flex align-items-center flex-column w-75 p-4 my-3">
-            <div class="d-flex flex-column c4">
-                <button><a href="carrinho.php">Meu carrinho</a></button>
-                <button id="btnPedidoCli">Meus pedidos</button>
-            </div>
-            <div class="c5">
-                <h3 class="pedidoN">Pedido N°123423</h3>
-                <!-- Fazer for aqui -->
-                <div class="c1">
-                    <div class="d-flex flex-column">
-                        <div class="c2 d-flex flex-row">
-                            <img src="images/picoleCoco.png" alt="Picolé sabor coco" class="imagem">
-                            <h3 class="titulo2">Nestlé La Frutta Coco</h3>
-                        </div>
-                        <div class="d-flex flex-column c3">
-                            <div class="preco d-flex flex-row justify-content-between">
-                                <p>Preço</p>
-                                <span>R$ 1,50</span>
-                            </div>
-                            <div>
-                                <p>Quantidade: 1</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Fim do for -->
-                <div class="botao d-flex justify-content-start mt-3 flex-column">
-                    <div>
-                        <p>Endereço: </p>
-                    </div>
-                    <div>
-                        <p>Total: </p>
-                    </div>
-                    <div>
-                        <button id="exclP">Excluir pedido</button>
-                    </div>
-                    
-                </div>
-            </div>
+            <h3>Meus pedidos</h3>
+            <?php
+                include_once "config/getPedidos.php";
+            ?>
         </div>
     </main>
-    
     <?php
         include_once 'components/footer.php';
     ?>
-    
-    <script src="script/sobre.js"></script>
-    <script src="script/header.js"></script>
     <script src="script/editar.js"></script>
-    
 </body>
 </html>
