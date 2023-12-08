@@ -39,14 +39,13 @@
     border-radius: 20px;
 }
 
-.botao #excl,
-.botao .b-excluir{
-    background-color: var(--rosa-bebe);
-    border: none;
-    border-radius: 7px;
-    font-family: var(--Agbalumo);
-    padding: 1px 10px;
-    height: 30px;
+.botao #excl{
+        background-color: var(--rosa-bebe);
+        border: none;
+        border-radius: 7px;
+        font-family: var(--Agbalumo);
+        padding: 1px 10px;
+        height: 30px;
 }
 
 select{
@@ -118,8 +117,7 @@ form input[type=submit]{
     margin: 10px 0;
 }
 
-@media (min-width: 768px) 
-{
+@media (min-width: 768px) {
     p{
         font-size: 1.3rem;
     }

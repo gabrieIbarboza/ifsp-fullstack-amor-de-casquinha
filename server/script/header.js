@@ -1,4 +1,3 @@
-(()=>{
 //referências
 var toggleBtn = document.getElementById('toggleBtn');
 var navigation = document.querySelector('.navigation');
@@ -15,4 +14,3 @@ toggleBtn.addEventListener('click', function() {
         navigation.classList.add('active');
     }
 });
-})()
