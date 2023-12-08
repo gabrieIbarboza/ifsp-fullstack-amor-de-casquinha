@@ -96,14 +96,6 @@ main{
     height: 30px;
 }
 
-.botao #edit a, a:visited, a:active{
-    color: black;
-} 
-
-.botao #excl a, a:visited, a:active{
-    color: black;
-} 
-
 .voltar{
     background-color: var(--azul-bebe);
     border: none;
@@ -164,6 +156,5 @@ form{
         width: 150px;
         height: 150px;
     }
-
     
 }

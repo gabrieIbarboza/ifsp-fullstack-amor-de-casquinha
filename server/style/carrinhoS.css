@@ -31,7 +31,7 @@
     padding: 8px 0;
 }
 
-.botao #excl{
+.botao .b-excluir{
         background-color: var(--rosa-bebe);
         border: none;
         border-radius: 7px;
@@ -71,42 +71,6 @@ select{
 .voltar a, a:visited, a:active{
     text-decoration: none;
     color: black;
-}
-
-.c4{
-    margin: 20px 0;
-}
-
-.c4 button{
-    background-color: var(--rosa-bebe);
-    border: none;
-    border-radius: 7px;
-    font-family: var(--Agbalumo);
-    padding: 0 10px;
-    height: 30px;
-    margin: 10px 0;
-}
-
-.c4 button a, a:visited, a:active{
-    color: black;
-    text-decoration: none;
-}
-
-form{
-    display: none;
-}
-
-form input[type=submit]{
-    border-radius: 10px;
-    border: none;
-    font-family: var(--Nunito);
-    margin: 10px 0;
-}
-
-.exibir{
-    display: flex !important;
-    flex-direction: column;
-    margin: 10px 0;
 }
 
 @media (min-width: 768px) {
