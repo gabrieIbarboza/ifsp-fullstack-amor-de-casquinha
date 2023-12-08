@@ -31,14 +31,6 @@
     padding: 8px 0;
 }
 
-.c2{
-    margin-right: 5px;
-}
-
-.c2 .imagem{
-    border-radius: 20px;
-}
-
 .botao #excl{
         background-color: var(--rosa-bebe);
         border: none;
@@ -118,39 +110,30 @@ form input[type=submit]{
 }
 
 @media (min-width: 768px) {
-    p{
-        font-size: 1.3rem;
-    }
-
-    button{
-        font-size: 1.3rem;
-    }
-
     .imagem{
-        width: 157px;
-        height: 163px;
+        width: 107px;
+        height: 113px;
         border-radius: 23px;
-        margin-right: 50px;
     }
     .conteiner1{
         width: 970px;
     }
-    
     .c1{
-        width: 60%;
+        width: 700px !important;
     }
-
-    .c3 h3{
-        font-size: 1.9rem;
+    .c2{
+        max-width: 20% !important;
     }
-
+    .c3{
+        max-width: 60% !important;
     }
     .botao{
         display: flex;
         justify-content: flex-start !important;
     }
-    #excl{
-        width: 100px;
+    .botao .excl{
+        padding-right: 0 !important;
+        max-width: 20%;
     }
     .preco{
         padding-left: 0 !important;
@@ -159,20 +142,5 @@ form input[type=submit]{
         display: flex;
         justify-content: center;
         margin-left: 0 !important;
-    }
-
-    .c4 button{
-        width: 220px;
-        height: 35px;
-    }
-
-    .c4 #btnAddEnd{
-        width: 220px;
-        height: 70px;
-    }
-
-    #formuAddEnd{
-        width: 40%;
-        font-size: 1.3rem;
     }
 }

@@ -34,45 +34,11 @@ button{
     font-family: var(--Agbalumo);
 }
 
-.c1{
-    font-size: 1.10rem;
-}
-
-.c2 .imagem{
-    border-radius: 20px;
-}
-
-.c5{
-    display: none;
-}
-
-.c5 h3{
-    font-size: 1.40rem;
-    padding-left: 10px;
-    align-self: center;
-    font-weight: bolder;
-}
-
-.c3 {
-    margin: 10px 0;
-}
-
-.c4 button{
-    width: 160px;
-    margin: 16px 0;
-}
-
-#exclP{
-    width: 160px;
-}
-
 form{
     display: none;
 }
 .exibir{
-    display: flex !important;
-    flex-direction: column;
-    margin: auto;
+    display: block !important;
 }
 form input{
     padding-left: 4px;
@@ -80,15 +46,6 @@ form input{
 
 button[type=submit]{
     margin: 10px;
-}
-
-.botao p{
-    font-size: 1.10rem;
-}
-
-.exibirP{
-    display: flex;
-    flex-direction: column;
 }
 
 @media (min-width: 768px) {
@@ -107,53 +64,11 @@ button[type=submit]{
     }
     .c1{
         font-size: 1.50rem;
-        width: 65%;
+        width: 50%;
     }
     button{
         width: 130px;
         height: 45px;
         font-size: 1.50rem;
-    }
-    
-    .c3 {
-        margin: 10px 0;
-    }
-
-    .c4 button{
-        width: 200px;
-    }
-
-    .c5 {
-        margin: 50px 0;
-        width: 65%;
-    }
-
-    .c5 .imagem{
-        width: 160px;
-        margin: 0 !important;
-    }
-
-    .c5 .pedidoN{
-        font-size: 1.40rem;
-        align-self: center;
-        font-weight: bolder;
-        margin-bottom: 20px;
-    }
-
-    .c5 .c2 .titulo2{
-        font-size: 1.7rem;
-        margin: 0;
-    }
-
-    .botao p{
-        font-size: 1.60rem;
-    }
-
-    #exclP{
-        width: 200px;
-    }
-
-    form{
-        width: 70%;
     }
 }
