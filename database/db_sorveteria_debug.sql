@@ -239,6 +239,11 @@ call SP_ProdutoPedidoCreate(
 call SP_PedidoUpdate(
 	idP int, dataP datetime, isDeliveryP tinyint, statusP varchar(20), funcionario int, endereco int
 );*/
+select * from tbEndereco;
+select * from tbCliente;
+call SP_ClienteDeleteByEmail(
+	'gvrocha14@gmail.com'
+);
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
