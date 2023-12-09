@@ -1,4 +1,6 @@
 <?php
+    session_start();
+    require_once 'config/config.php';
     include_once 'config/createPedido.php';
 ?>
 <!DOCTYPE html>
@@ -22,18 +24,17 @@
         <div class="conteiner1 conteiner d-flex align-items-center flex-column w-75 p-4 my-3">
             <div class="c1">
                 <div class="d-flex justify-content-center m-2"><img src="images/funcionario1.png" alt="" ></div>
-                <div id="dados">
-                    <p>Nome: Amanda</p>
-                    <p>Data de nascimento: 15/02/1997</p>
-                    <p>Endereço: Rua da Luz, 42</p>
-                </div>
-
-        
+                <?php 
+                    echo '
+                    <div id="dados">
+                        <p>Nome: '.$_SESSION["userName"].'</p>
+                        <p>Endereço: '.$_SESSION["userCep"].' - '.$_SESSION["userRua"].', '.$_SESSION["userNum"].', '.$_SESSION["userCompl"].' - '.$_SESSION["userBairro"].'</p>
+                    </div>
+                    ';
+                ?>  
                 <form action="" method="POST" id="formulario">
                     <label for="nome">Nome:</label>
                     <input type="text" id="nome" placeholder="Nome completo">
-                    <label for="dataNasc">Data de nascimento:</label>
-                    <input type="date" id="dataNasc" placeholder="Data de nascimento">
                     <label for="endereco">Endereço:</label>
                     <input type="text" id="endereco" placeholder="Endereço">
                     <button type="submit">Salvar</button>

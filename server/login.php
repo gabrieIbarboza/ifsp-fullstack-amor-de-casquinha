@@ -19,9 +19,9 @@
     </div>
     <main>
         <div class="d-flex justify-content-center align-items-center">
-            <form action="" method="post" class="d-flex flex-column my-4 formu">
-                <input type="text" name="usuario" placeholder="Usuário">
-                <input type="text" name="senha" placeholder="Senha">
+            <form action="" method="post" class="d-flex flex-column formu">
+                <input type="email" name="email" placeholder="E-mail" required>
+                <input type="password" name="senha" placeholder="Senha" required>
                 <input type="submit" value="Login">
             </form>
         </div>

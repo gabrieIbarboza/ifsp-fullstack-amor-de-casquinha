@@ -1,7 +1,4 @@
 <?php
-session_start();
-require_once 'config/config.php';
-
 if(isset($_POST["notaFiscal"]) && isset($_SESSION["cartArray"]))
 {
     //Criar pedido

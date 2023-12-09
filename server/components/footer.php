@@ -6,7 +6,7 @@
         </div>
         <img src="images/Rectangle 1048.png" class="pt-3 linha">
         <div class="text-center">
-            <p>2023 Amor de Casquinha Todos os direitos reservados</p>
+            <p>&copy; 2023 Amor de Casquinha Todos os direitos reservados</p>
         </div>
     </div>
 </footer>
