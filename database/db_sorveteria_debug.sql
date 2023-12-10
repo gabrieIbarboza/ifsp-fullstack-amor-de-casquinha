@@ -239,6 +239,11 @@ call SP_ProdutoPedidoCreate(
 call SP_PedidoUpdate(
 	idP int, dataP datetime, isDeliveryP tinyint, statusP varchar(20), funcionario int, endereco int
 );*/
+SELECT * FROM tbCLiente LIMIT 100;
+CALL SP_FuncionarioCreate(
+	'funcionario@teste.com', '$2y$10$Mie1Ce7E0/QlJ1SjPy43deAomSVIB98xeYjjUjRWXoWUy2obJgru.', 'Funcionario Teste', '11999999999', 1
+);
+SELECT * FROM tbFuncionario LIMIT 100;
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
