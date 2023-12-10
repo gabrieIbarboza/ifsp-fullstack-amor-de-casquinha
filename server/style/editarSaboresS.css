@@ -77,6 +77,14 @@ main{
     height: 30px;
 }
 
+.botao #excl a, a:visited, a:active{
+    color: black;
+}
+
+.botao #edit a, a:visited, a:active{
+    color: black;
+}
+
 .add{
     background-color: var(--azul-bebe);
     border: none;
