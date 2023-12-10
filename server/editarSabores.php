@@ -8,25 +8,41 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="style/CabecalhoRodape.css">
-    <link rel="stylesheet" href="style/editarSabores.css">
+    <link rel="stylesheet" href="style/editarSaboresS.css">
 </head>
 <body>
+    
     <?php
         include_once 'components/header.php';
     ?>
+
     <main>
-        <h1>Picolé Sabores</h1>
+            <h1>Picolé Sabores</h1>
+        
         <div class=" d-flex flex-column align-items-center justify-content-center">
+          <?php  $var = isset($_SESSION['var']) ? $_SESSION['var'] : ""; 
+            echo $var;
+            session_destroy();
+            if(session_status() === PHP_SESSION_NONE){
+                session_start();
+            }
+          ?>
             <button class="add">Adicionar Sabor</button>
             <div>
-                    <form action="" method="POST" id="addFormulario">
-                        <label for="nome1">Nome:</label>
-                        <input type="text" id="nome1" name="nomeSabAdd" placeholder="Nome do produto">
-                        <label for="preco1">Preço:</label>
-                        <input type="text" id="preco1" name="precoSabAdd" placeholder="Preço do produto">
+                    <form action="config/createSabor.php" method="POST" id="addFormulario">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nomeSabAdd" placeholder="Nome do produto">
+                        <label for="preco">Preço:</label>
+                        <input type="text" id="preco" name="precoSabAdd" placeholder="Preço do produto">
                         <label for="nomeImagem">Nome do arquivo de imagem:</label>
                         <input type="text" id="nomeImagem" name="nomeImagemSabAdd" placeholder="imagem.png">
-                        <button type="submit">Salvar</button>
+                        <label for="tipoP">Tipo de Produto:</label>
+                        <select id="tipoP" name="ProdutoSabAdd" style="border-radius: 10px;
+    border: 2px solid rgb(167, 167, 167); padding-left: 4px; height: 30px;">
+                            <option value="Produto Teste">Produto Teste</option>
+                            <option value="Açaí Teste">Açaí Teste</option>
+                        </select>
+                        <button name="bntCreatSab" type="submit">Salvar</button>
                     </form>
                 </div>
             <div class="conteiner1">
@@ -43,20 +59,15 @@
                                 <span>R$ 1,50</span>
                             </div>
                         </div>
-                        <div>
-                            <form action="" method="POST" id="formulario" class="formulario">
-                                <label for="nome2">Nome:</label>
-                                <input type="text" id="nome2" name="nomeSabEdt" placeholder="Nome do produto">
-                                <label for="preco2">Preço:</label>
-                                <input type="text" id="preco2" name="precoSabEdt" placeholder="Preço do produto">
-                                <button type="submit">Salvar</button>
-                            </form>
-                        </div>
+
                     </div>
 
                     <div class="botao text-center d-flex justify-content-evenly mt-3">
-                        <button id="excl">Excluir</button>
-                        <button id="edit">Editar</button>
+                    <?php $idSab = 3; ?>
+                        <button id="excl"><?php echo "<a href='excluirSabor.php?Produto={$idSab}'>Excluir</a>" ?></button>
+                        <!-- O id é o id da variação do produto, que é colocado num link que leva pra página de edição -->
+                        
+                        <button id="edit"><?php echo "<a href='editaSabor.php?Produto={$idSab}'>Editar</a>" ?></button>
                     </div>
 
                 </div>
@@ -64,10 +75,14 @@
             <button class="voltar"><a href="index.html">Voltar</a></button>
         </div>
     </main>
+    
     <?php
         include_once 'components/footer.php';
     ?>
+    
+    <script src="script/header.js"></script>
     <script src="script/adicionar.js"></script>
-    <script src="script/editar.js"></script>
+    <!-- <script src="script/editar.js"></script> -->
+    
 </body>
 </html>
