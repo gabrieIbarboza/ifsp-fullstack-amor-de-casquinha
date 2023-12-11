@@ -15,7 +15,7 @@ require_once 'config.php';
             echo "Erro genérico: " . $e->getMessage();
             echo "nn";
         }
-        header("Location: ../index.php");
+        header("Location: ../editarProdutos.php");
     exit();
     }
     

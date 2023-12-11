@@ -14,6 +14,7 @@
     
     <?php
         include_once 'components/header.php';
+        require 'config/config.php';
     ?>
 
     <main>
@@ -38,17 +39,17 @@
                         
                         <select id="tipoProduto" name="tipoProdAdd">
                             <?php
-                            // $idProduto = $_GET["produto"];
-                            // $stmt = $conn->prepare('SELECT * from tbproduto where idProduto = :id');
-                            // $stmt->bindParam(':id', $idProduto);
-                            // $stmt->execute();
+                            $idProduto = $_GET["produto"];
+                            $stmt = $conn->prepare('SELECT * from tbproduto where idProduto = :id');
+                            $stmt->bindParam(':id', $idProduto);
+                            $stmt->execute();
 
-                            // while($row = $stmt->fetch()){
-                            //     echo "<option value='" . $row['nomeProduto'] . "'>" . $row['nomeProduto'] . "</option>";
-                            // }
+                            while($row = $stmt->fetch()){
+                                echo "<option value='" . $row['nomeProduto'] . "'>" . $row['nomeProduto'] . "</option>";
+                            }
                              
                             
-                            // $_SESSION['idProduto'] = $idProduto;
+                            $_SESSION['idProduto'] = $idProduto;
                             ?>
                         </select>
                         <button name="bntCreatSab" type="submit">Salvar</button>

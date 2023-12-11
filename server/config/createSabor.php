@@ -4,11 +4,11 @@ session_start();
 
 if(isset($_POST['bntCreatSab'])){
     // Verifica se todos os campos estão preenchidos
-    if(!empty($_POST['nomeSabAdd']) && !empty($_POST['precoSabAdd']) && !empty($_POST['nomeImagemSabAdd']) && !empty($_POST['ProdutoSabAdd'])){
+    if(!empty($_POST['nomeSabAdd']) && !empty($_POST['precoSabAdd']) && !empty($_POST['nomeImagemSabAdd']) && !empty($_POST['tipoProdAdd'])){
         $nome = $_POST['nomeSabAdd'];
         $preco = $_POST['precoSabAdd'];
         $img = $_POST['nomeImagemSabAdd'];
-        $idP = $_POST['ProdutoSabAdd'];
+        $idP = $_POST['tipoProdAdd'];
 
         try{
             $cmd = $conn->prepare("CALL SP_VariacaoCreate(?, ?, ?, ?)");
@@ -23,7 +23,7 @@ if(isset($_POST['bntCreatSab'])){
             echo "Erro genérico: " . $e->getMessage();
         }
 
-        header("Location: ../saboresFun.php");
+        header("Location: ../editarProdutos.php");
         exit();
 
     } else{
