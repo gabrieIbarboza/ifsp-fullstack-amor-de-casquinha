@@ -22,11 +22,11 @@
                 <label for="nome1">Nome:</label>
                 <input type="text" id="nome1" name="nomeFunAdd" placeholder="Nome">
                 <label for="email2">Email:</label>
-                <input type="text" id="email1" name="emailFunAdd" placeholder="Email">
+                <input type="email" id="email1" name="emailFunAdd" placeholder="Email">
                 <label for="telefone1">Telefone:</label>
                 <input type="text" id="telefone1" name="telefoneFunAdd" placeholder="(11) 955555555">
                 <label for="senha1">Senha:</label>
-                <input type="text" id="senha1" name="senhaFunAdd" placeholder="Senha">
+                <input type="password" id="senha1" name="senhaFunAdd" placeholder="Senha">
                 <button type="submit">Salvar</button>
             </form>
             <div class="conteiner1">

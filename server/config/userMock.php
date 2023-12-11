@@ -8,4 +8,5 @@ $_SESSION["userNum"] = 1234;
 $_SESSION["userCompl"] = 'Apt 72';
 $_SESSION["userBairro"] = 'Bairro Povão';
 $_SESSION["userEnderecoId"] = '4';
+$_SESSION["userProfile"] = 'CLIE';
 ?>
