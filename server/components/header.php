@@ -6,8 +6,7 @@
         </div>
         <nav class="navigation text-center">
             <?php 
-                    session_start();
-                    include_once "config/config.php";
+                    include "config/config.php";
 
                     if(!isset($_SESSION["userEmail"])){
                         echo "<a href='index.php'>Início</a>";
