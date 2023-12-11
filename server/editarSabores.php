@@ -20,12 +20,10 @@
             <h1>Picolé Sabores</h1>
         
         <div class=" d-flex flex-column align-items-center justify-content-center">
-          <?php  $var = isset($_SESSION['var']) ? $_SESSION['var'] : ""; 
+          <?php  
+          $var = isset($_SESSION['var']) ? $_SESSION['var'] : ""; 
             echo $var;
-            session_destroy();
-            if(session_status() === PHP_SESSION_NONE){
-                session_start();
-            }
+            $_SESSION['var'] = NULL;
           ?>
             <button class="add">Adicionar Sabor</button>
             <div>
@@ -37,10 +35,21 @@
                         <label for="nomeImagem">Nome do arquivo de imagem:</label>
                         <input type="text" id="nomeImagem" name="nomeImagemSabAdd" placeholder="imagem.png">
                         <label for="tipoP">Tipo de Produto:</label>
-                        <select id="tipoP" name="ProdutoSabAdd" style="border-radius: 10px;
-    border: 2px solid rgb(167, 167, 167); padding-left: 4px; height: 30px;">
-                            <option value="Produto Teste">Produto Teste</option>
-                            <option value="Açaí Teste">Açaí Teste</option>
+                        
+                        <select id="tipoProduto" name="tipoProdAdd">
+                            <?php
+                            // $idProduto = $_GET["produto"];
+                            // $stmt = $conn->prepare('SELECT * from tbproduto where idProduto = :id');
+                            // $stmt->bindParam(':id', $idProduto);
+                            // $stmt->execute();
+
+                            // while($row = $stmt->fetch()){
+                            //     echo "<option value='" . $row['nomeProduto'] . "'>" . $row['nomeProduto'] . "</option>";
+                            // }
+                             
+                            
+                            // $_SESSION['idProduto'] = $idProduto;
+                            ?>
                         </select>
                         <button name="bntCreatSab" type="submit">Salvar</button>
                     </form>
@@ -49,6 +58,7 @@
                 <div class="c1">
                     <?php
                         include_once 'config/getVariacoesFun.php';
+                        
                     ?>
                 </div>
             </div>
@@ -61,8 +71,6 @@
     ?>
     
     <script src="script/header.js"></script>
-    <script src="script/adicionar.js"></script>
-    <!-- <script src="script/editar.js"></script> -->
-    
+    <script src="script/adicionar.js"></script>    
 </body>
 </html>

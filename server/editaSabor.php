@@ -20,6 +20,7 @@
          para esta página, que vai verificar se existe e se existir, vai mostrar uma mensagem a abaixo dizendo que nem todos
          os campos foram preenchidos*/
         $var = isset($_SESSION['var']) ? $_SESSION['var'] : "";
+        $_SESSION['var'] = NULL;
 
 
         // Para mostrar os dados dentro dos inputs
@@ -33,15 +34,10 @@
             if(isset($_SESSION['idSaborTeste'])){
                 $idVari = $_SESSION['idSaborTeste'];
             // serve para que as sessions não fiquem sendo reutilizadas repitidamente
-                session_destroy();
             }else{
                 $idVari = $_GET['Produto'];
             }
 
-            /*Caso a sessão tenha cido destruída, é inicializada outra */
-            if(session_status() === PHP_SESSION_NONE){
-                session_start();
-            }
 
             try{
                 $cmd = $conn->prepare("CALL SP_VariacaoReadById(?)");
