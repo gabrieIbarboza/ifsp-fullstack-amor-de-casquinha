@@ -4,7 +4,6 @@
     {
         header("location: login.php");
     }
-    require_once 'config/config.php';
     include_once 'config/createPedido.php';
 ?>
 <!DOCTYPE html>

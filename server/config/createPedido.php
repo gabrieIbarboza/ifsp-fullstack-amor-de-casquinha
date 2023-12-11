@@ -1,6 +1,8 @@
 <?php
 if(isset($_POST["notaFiscal"]) && isset($_SESSION["cartArray"]))
 {
+    include 'config/config.php';
+
     //Criar pedido
     $isDelivery = 0;
     if(isset($_POST["ckbIsDelivery"]) && $_POST["ckbIsDelivery"] == 'on')
@@ -41,5 +43,7 @@ if(isset($_POST["notaFiscal"]) && isset($_SESSION["cartArray"]))
         }
         break;
     }
+
+    $conn = null;
 }
 ?>
