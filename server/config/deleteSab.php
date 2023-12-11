@@ -15,7 +15,7 @@ require_once 'config.php';
             echo "Erro genérico: " . $e->getMessage();
             echo "nn";
         }
-        header("Location: ../saboresFun.php");
+        header("Location: ../index.php");
     exit();
     }
     
