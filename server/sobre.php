@@ -1,9 +1,6 @@
 <?php
     session_start();
-    if (!isset($_SESSION["userEmail"]))
-    {
-        header("location: login.php");
-    }
+    require_once 'config/config.php';
     include_once 'config/createPedido.php';
 ?>
 <!DOCTYPE html>
@@ -17,12 +14,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="style/CabecalhoRodape.css">
     <link rel="stylesheet" href="style/sobreS.css">
+    <link rel="shortcut icon" href="images/iceCreamIcon.ico" type="image/x-icon">
 </head>
 <body>
     <?php
         include_once 'components/header.php';
     ?>
     <main>
+        <!-- TODO: Puxar dados do cliente com $_SESSION -->
         <div class="conteiner1 conteiner d-flex align-items-center flex-column w-75 p-4 my-3">
             <div class="c1">
                 <div class="d-flex justify-content-center m-2"><img src="images/funcionario1.png" alt="" ></div>
