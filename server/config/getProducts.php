@@ -14,8 +14,7 @@ do {
         $redirectTo = 'sabores.php?produto='.$row['idProduto'];
         echo '<div class="card categ d-flex align-items-center">
             <picture>
-                <source media="(min-width: 768px)" srcset="'.$row["fotoProduto"].'Desktop.png">
-                <img src="'.$row["fotoProduto"].'.png" alt="'.$row["nomeProduto"].'">
+                <img src="images/'.$row["fotoProduto"].'.png" alt="'.$row["nomeProduto"].'">
             </picture>
             <div class="d-flex align-items-center flex-column c2">
                 <h4>'.$row["nomeProduto"].'</h4>
