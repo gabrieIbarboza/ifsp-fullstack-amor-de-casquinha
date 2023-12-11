@@ -39,6 +39,7 @@ header img {
 .logo img{
     width: 40px;
     height: auto;
+    margin-right: 9px;
 }
 
 nav.navigation {
