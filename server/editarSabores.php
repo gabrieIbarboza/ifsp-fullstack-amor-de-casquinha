@@ -47,32 +47,12 @@
                 </div>
             <div class="conteiner1">
                 <div class="c1">
-
-                    <div class="d-flex flex-row">
-                        <div class="col col-4">
-                            <img src="images/picoleCoco.png" alt="Picolé sabor coco" class="imagem">
-                        </div>
-                        <div id="dados">
-                            <h3 class="titulo px-2">Nestlé La Frutta Coco</h3>
-                            <div class="preco d-flex flex-row justify-content-between px-2">
-                                <p>Preço</p>
-                                <span>R$ 1,50</span>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="botao text-center d-flex justify-content-evenly mt-3">
-                    <?php $idSab = 3; ?>
-                        <button id="excl"><?php echo "<a href='excluirSabor.php?Produto={$idSab}'>Excluir</a>" ?></button>
-                        <!-- O id é o id da variação do produto, que é colocado num link que leva pra página de edição -->
-                        
-                        <button id="edit"><?php echo "<a href='editaSabor.php?Produto={$idSab}'>Editar</a>" ?></button>
-                    </div>
-
+                    <?php
+                        include_once 'config/getVariacoesFun.php';
+                    ?>
                 </div>
             </div>
-            <button class="voltar"><a href="index.html">Voltar</a></button>
+            <button class="voltar"><a href="index.php">Voltar</a></button>
         </div>
     </main>
     
