@@ -1,6 +1,5 @@
 <?php
 
-require_once 'userMock.php';
 $isLoggedIn = isset($_SESSION["userEmail"]);
 if($isLoggedIn)
 {

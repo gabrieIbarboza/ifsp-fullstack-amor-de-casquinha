@@ -45,7 +45,7 @@ do{
         {
             echo '<script>';
             echo 'alert("Cliente já cadastrado! Faça login!");';
-            echo 'window.location.href = "../login.php";';
+            echo 'location.replace("../login.php");';
             echo '</script>';
             exit;
         }

@@ -395,6 +395,28 @@ END;
 -- Login
 -- -----------------------------------------------------
 DELIMITER //
+CREATE PROCEDURE SP_Login(
+	email varchar(60)
+)
+BEGIN
+	IF EXISTS (SELECT emailFuncionario FROM tbFuncionario WHERE emailFuncionario like email)
+    THEN
+		SELECT * FROM tbFuncionario WHERE emailFuncionario LIKE email LIMIT 1;
+	ELSEIF EXISTS (SELECT emailCliente FROM tbCliente WHERE emailCliente LIKE email)
+		THEN
+			SELECT * 
+				FROM tbCliente 
+				INNER JOIN tbEndereco
+				ON tbCliente.tbEndereco_idEndereco = tbEndereco.idEndereco
+				WHERE emailCliente LIKE email
+                LIMIT 1;
+	ELSE
+		SELECT '403' AS 'Status', 'ERROR_EMAIL_NAO_ENCONTRADO' AS 'Error', '' AS 'Message', '' AS 'Body';
+    END IF;
+END;
+//
+
+DELIMITER //
 CREATE PROCEDURE SP_UpdatePassword(
 	email varchar(60), newPass varchar(255)
 )

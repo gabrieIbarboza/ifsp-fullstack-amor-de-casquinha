@@ -1,5 +1,9 @@
 <?php
     session_start();
+    if (!isset($_SESSION["userEmail"]))
+    {
+        header("location: login.php");
+    }
     require_once 'config/config.php';
     include_once 'config/createPedido.php';
 ?>
@@ -20,7 +24,6 @@
         include_once 'components/header.php';
     ?>
     <main>
-        <!-- TODO: Puxar dados do cliente com $_SESSION -->
         <div class="conteiner1 conteiner d-flex align-items-center flex-column w-75 p-4 my-3">
             <div class="c1">
                 <div class="d-flex justify-content-center m-2"><img src="images/funcionario1.png" alt="" ></div>
