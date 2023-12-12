@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -23,6 +26,7 @@
                 <input type="email" name="email" placeholder="E-mail" required>
                 <input type="password" name="senha" placeholder="Senha" required>
                 <input type="submit" value="Login">
+                <a href="registro.php">Não possui login? Clique para criar conta!</a>
             </form>
         </div>
     </main>

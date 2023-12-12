@@ -727,6 +727,29 @@ BEGIN
         WHERE tbPedido.statusPedido like statusP;
 END;
 //
+DELIMITER //
+CREATE PROCEDURE SP_PedidoReadAllNotCompleted()
+BEGIN
+	SELECT * 
+		FROM tbPedido
+        LEFT OUTER JOIN tbProdutoPedido
+		ON tbPedido.idPedido = tbProdutoPedido.tbPedido_idPedido
+        WHERE (tbPedido.statusPedido not like 'Finalizado'
+        AND tbPedido.statusPedido not like 'Entregue');
+END;
+//
+DELIMITER //
+CREATE PROCEDURE SP_PedidoReadById(
+	idP int
+)
+BEGIN
+	SELECT * 
+		FROM tbPedido
+        LEFT OUTER JOIN tbProdutoPedido
+		ON tbPedido.idPedido = tbProdutoPedido.tbPedido_idPedido
+        WHERE tbPedido.idPedido = idP;
+END;
+//
 
 DELIMITER //
 CREATE PROCEDURE SP_PedidoUpdate(

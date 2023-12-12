@@ -1,7 +1,6 @@
 <?php
-  require 'config/config.php';
+    session_start();
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -26,6 +25,7 @@
                 <div class="c1">
                     <div class="c2">
                         <?php
+                        require 'config/config.php';
                         $idFuncionario = $_GET['funcionario'];
                         $stmt = $conn->prepare('SELECT * from tbfuncionario where idFuncionario = :id');
                         $stmt->bindParam(':id', $idFuncionario);
@@ -43,8 +43,7 @@
                                 <input type="text" id="telefone2" name="telefoneFunEdt" placeholder="(11) 955555555" value="'.$row['telefoneFuncionario'].'">
                                 <button type="submit">Salvar</button>
                             </form>';  
-                        }
-                            
+                        }  
                         ?>
                     </div>
                 </div>

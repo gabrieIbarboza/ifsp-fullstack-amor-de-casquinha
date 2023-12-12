@@ -1,7 +1,6 @@
 <?php
-  require 'config/config.php';
+    session_start();
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -29,6 +28,7 @@
             <div class="conteiner1">   
                 <div class="c1">
                     <?php
+                        require 'config/config.php';
                         $idSabor = $_GET['Produto'];
 
                         try{

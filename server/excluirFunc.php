@@ -1,7 +1,6 @@
 <?php
-  require 'config/config.php';
+    session_start();
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -26,6 +25,7 @@
             <div class="conteiner1">   
                 <div class="c1">
                     <?php
+                        require 'config/config.php';
                         $idFuncionario = $_GET['funcionario'];
                         $stmt = $conn->prepare('SELECT * from tbfuncionario where idFuncionario = :id');
                         $stmt->bindParam(':id', $idFuncionario);

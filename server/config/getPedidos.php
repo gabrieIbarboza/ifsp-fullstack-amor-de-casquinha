@@ -1,6 +1,4 @@
 <?php
-//include_once("userMock.php");
-
 if(isset($_SESSION["userEmail"]))
 {
     include 'config/config.php';

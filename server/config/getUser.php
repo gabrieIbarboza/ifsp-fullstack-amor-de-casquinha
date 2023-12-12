@@ -42,7 +42,7 @@ else if(isset($_POST["email"]) && isset($_POST["senha"]))
                         $_SESSION["userName"] = $row["nomeFuncionario"];
                         $_SESSION["userTel"] = $row["telefoneFuncionario"];
                         $_SESSION["userProfile"] = ($row["isAdm"] == 1 ? "FADM" : "FUNC" );
-                        header("location: ../index.php");
+                        header("location: ../pedidos.php");
                     }
                     else
                     {
