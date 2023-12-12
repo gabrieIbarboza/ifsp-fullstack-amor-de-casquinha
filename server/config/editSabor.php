@@ -34,7 +34,7 @@ session_start();
                 echo "Erro genérico: " . $e->getMessage();
             }
 
-            header('Location: ../editarProdutos.php');
+            header('Location: ../index.php');
             exit();
             
         }else{

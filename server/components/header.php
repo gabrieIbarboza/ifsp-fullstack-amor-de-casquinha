@@ -1,12 +1,12 @@
 <header>
     <div class="conteiner-fluid d-flex justify-content-around cabecalho align-items-center">
         <div class="logo">
-            <img src="images/image 1.png" alt="Logo Amor de Casquinha" class="logo">
+            <img src="images/iceCream.png" alt="Logo Amor de Casquinha" class="logo">
             <h4 class="titulo1">Amor de Casquinha</h4>
         </div>
         <nav class="navigation text-center">
             <?php 
-                    include "config/config.php";
+                    include_once "config/config.php";
 
                     if(!isset($_SESSION["userEmail"])){
                         echo "<a href='index.php'>Início</a>";
