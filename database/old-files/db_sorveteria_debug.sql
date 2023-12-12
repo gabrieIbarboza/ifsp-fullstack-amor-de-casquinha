@@ -248,6 +248,11 @@ CALL SP_Login('funcionario@teste.com');
 SELECT * FROM tbCliente LIMIT 100;
 CALL SP_Login('gvrocha14@gmail.com');
 
+CALL SP_PedidoReadAllNotCompleted();
+CALL SP_PedidoUpdate(
+	1, '2023-12-11 23:56:28', 1, 'Entregue', null, 1
+);
+
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
