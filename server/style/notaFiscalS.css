@@ -20,6 +20,10 @@ main{
     width: 342px;
 }
 
+.conteiner1 h3{
+    margin-top: 20px;
+}
+
 .c1{
     margin: 20px 0;
     border-top: 2px solid var(--roxo-bebe);
@@ -29,6 +33,8 @@ main{
 
 .imagem{
     border-radius: 20px;
+    width: 140px;
+    height: auto;
 }
 
 .c3 h3{
@@ -37,6 +43,15 @@ main{
 
 .botao{
     height: 30px;
+}
+
+.btn{
+    background-color: var(--rosa-bebe);
+    border: none;
+    border-radius: 7px;
+    font-family: var(--Agbalumo);
+    height: 30px;
+    margin-bottom: 20px;
 }
 
 .botao .b-excluir{

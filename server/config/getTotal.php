@@ -65,14 +65,14 @@ if(isset($_SESSION["cartArray"]))
                 '.$cep.' - '.$rua.', '.$num.', '.$compl.' - '.$bairro.'
             </div>
             <input type="hidden" name="notaFiscal" value="1">
-            <input name="btnSubmit" id="btnSubmit" type="submit" value="Concluir Pedido">
+            <input name="btnSubmit" id="btnSubmit" type="submit" value="Concluir Pedido" class="btn">
         </form>
         ';
     }
     else
     {
         echo '
-        <button id="btnGoToLogin">Fazer Login para Concluir Pedido</button>
+        <button id="btnGoToLogin" class="btn">Fazer Login para Concluir Pedido</button>
         ';
     }
 }
