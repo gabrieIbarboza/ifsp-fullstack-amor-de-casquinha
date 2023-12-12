@@ -10,7 +10,6 @@
     --verde-bebe: #E2FFC7;
 }
 
-
 h1{
     font-family: var(--Agbalumo);
     font-size: 2rem;
@@ -18,88 +17,16 @@ h1{
     text-align: center;
     margin: 20px auto;
 }
+
 main{
     min-height: calc(100vh - 170px);
-}
-.conteiner1 button{
-    width: 208px;
-    background-color: var(--azul-bebe);
-}
-
-.conteiner1{
-    display: flex;
-    flex-direction: column;
-}
-
-.c1{
-    background-color: var(--verde-bebe);
-    padding: 15px;
-    border-radius: 20px;
-    margin: 20px 0;
-    display: flex;
-    flex-direction: column;
-}
-
-.c2 {
-    display: flex;
-    flex-direction: row !important;
-}
-
-.c3{
-    width: 200px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
 }
 
 .imagem{
     border-radius: 20px;
-    margin: 10px;
-    width: 110px;
-    height: auto;
-}
-
-.titulo{
     margin-top: 10px;
-    font-family: var(--Nunito);
-    font-size: 1.25rem;
-    font-weight: bold;
-    padding-left: 10px;
-}
-
-.preco{
-    margin: 50px 0 0 0;
-    padding-left: 10px;
-}
-
-.preco span{
-    font-weight: bold;
-}
-
-.botao #excl{
-    background-color: var(--rosa-bebe);
-    border: none;
-    border-radius: 7px;
-    font-family: var(--Agbalumo);
-    width: 90px;
-    height: 30px;
-}
-
-.botao #edit{
-    background-color: var(--azul-bebe);
-    border: none;
-    border-radius: 7px;
-    font-family: var(--Agbalumo);
-    width: 90px;
-    height: 30px;
-}
-
-.botao #excl a, a:visited, a:active{
-    color: black;
-}
-
-.botao #edit a, a:visited, a:active{
-    color: black;
+    width: 160px;
+    height: auto;
 }
 
 .add{
@@ -109,9 +36,67 @@ main{
     font-family: var(--Nunito);
     font-weight: bolder;
     font-size: 1.30rem;
-    width: 190px;
+    width: 240px;
     height: 40px;
     margin: 20px 0;
+}
+
+.conteiner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteiner h3{
+    text-align: center;
+}
+
+.c1{
+    background-color: var(--amarelo-bebe);
+    padding: 15px;
+    border-radius: 20px;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.c2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.c3{
+    width: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.c3 img{    
+    border-radius: 20px;
+}
+
+.conteiner1 button{
+    width: 208px;
+    background-color: var(--rosa-bebe);
+    border: none;
+    border-radius: 7px;
+    font-family: var(--Agbalumo);
+    width: 100px;
+    height: 39px;
+    font-size: 1.3rem;
+}
+
+.titulo{
+    margin-top: 10px;
+    font-family: var(--Nunito);
+    font-size: 1.25rem;
+    font-weight: bold;
 }
 
 .voltar{
@@ -131,47 +116,17 @@ main{
     text-decoration: none;
 }
 
-.c1 form{
-    display: none;
-    padding-left: 10px;
-}
-
-.exibir{
-    display: flex !important;
-    flex-direction: column;
-}
-form input{
-    padding-left: 4px;
-    border-radius: 10px;
-    border: 2px solid rgb(167, 167, 167);
-}
-
-form button[type=submit]{
-    border: none !important;
-    border-radius: 20px;
-    margin: 10px;
-}
-
-form{
-    display: none;
-}
-
 @media (min-width: 768px) {
-    
-    .imagem{
-        width: 140px;
-        height: auto;
-    }
-
     .conteiner1{
         display: flex;
-        flex-direction: row;
+        flex-direction: row !important;
         flex-wrap: wrap;
         width: 90%;
         justify-content: center;
     }
     .c1{
         margin: 29px;
+        width: 520px;
     }
     h1{
         padding-top: 20px !important;
@@ -179,5 +134,13 @@ form{
     .botao #excl, #edit{
         font-size: 1.25rem;
     }
+    .c3 img{
+        width: 150px;
+        height: 150px;
+    }
+    .imagem{
+        width: 180px;
+    }
+
     
 }

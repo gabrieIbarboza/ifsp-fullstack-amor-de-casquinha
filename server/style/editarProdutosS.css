@@ -49,7 +49,10 @@ main{
 
 picture img{
     margin: 8px;
+    width: 160px;
+    height: auto;
 }
+
 .botao{
     margin: 8px;
     display: flex;
@@ -80,6 +83,10 @@ picture img{
 .botao #vari{
     background-color: var(--amarelo-bebe);
     width: 100px !important;
+}
+
+.botao #vari a, a:visited, a:active{
+    color: black;
 }
 
 .botao #excl a, a:visited, a:active{
@@ -146,10 +153,6 @@ form{
 
 @media (min-width: 768px) {
     
-    .imagem{
-        width: 107px;
-        height: 113px;
-    }
     .conteiner1{
         display: flex;
         flex-direction: row;

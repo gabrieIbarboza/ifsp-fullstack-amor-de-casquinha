@@ -17,7 +17,6 @@
 header {
 	position: fixed;
     width: 100%;
-	background-color: blue;
 	padding: 20px;
 	display: flex;
 	justify-content: space-around;
