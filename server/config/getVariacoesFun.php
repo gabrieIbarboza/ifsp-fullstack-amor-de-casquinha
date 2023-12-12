@@ -18,9 +18,9 @@ if(isset($_GET["produto"]))
                 $redirectToEditar = 'editaSabor.php?Produto='.$row['idVariacao'];
                 echo '
                 <div class="c1">
-                <div class="row">
-                    <div class="col col-4"><img src="images/'.$row["fotoVariacao"].'" alt="'.$row["nomeVariacao"].'" class="imagem"></div>
-                    <div class="col">
+                <div class="c2">
+                    <div><img src="images/'.$row["fotoVariacao"].'" alt="'.$row["nomeVariacao"].'" class="imagem"></div>
+                    <div class="c3">
                         <h3 class="titulo px-2">'.$row["nomeVariacao"].'</h3>
                         <div class="preco d-flex flex-row justify-content-between px-2">
                             <p>Preço</p>
