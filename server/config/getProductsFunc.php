@@ -19,7 +19,7 @@ do {
         <div class="c1">
             <div class="card categ d-flex align-items-center">
                 <picture>
-                    <img src="images/'.$row["fotoProduto"].'.png" alt="'.$row["nomeProduto"].'">
+                    <img src="images/'.$row["fotoProduto"].'" alt="'.$row["nomeProduto"].'">
                 </picture>
                 <div class="botao text-center d-flex justify-content-evenly mt-3">
                     <button id="vari"><a href="'.$redirectToVariacao.'">Ver Sabores</a></button>        
