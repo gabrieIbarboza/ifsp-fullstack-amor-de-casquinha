@@ -1,6 +1,7 @@
 <?php
-  require 'config/config.php';
-    session_start();
+require_once 'config/blockURLAccess.php';
+session_start();
+require 'config/config.php';
 ?>
 
 <!DOCTYPE html>

@@ -1,5 +1,6 @@
 <?php
-  require 'config/config.php';
+    require_once 'config/blockURLAccess.php';
+    require 'config/config.php';
 ?>
 
 <!DOCTYPE html>

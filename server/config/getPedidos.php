@@ -11,18 +11,33 @@ if(isset($_SESSION["userEmail"]))
     $stmt->bindParam(2, $recordsLimit);
     $stmt->bindParam(3, $recordsOffset);
     $stmt->execute();
-    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    foreach($result as $row)
+    if($stmt->rowCount() > 0)
     {
-        echo '
-        <p>Número do Pedido: '.$row['idPedido'].'</p>
-        <p>Realizado em: '.$row['dataPedido'].'</p>
-        <p>Total: R$'.$row['totalPedido'].'</p>
-        <p>'.(($row['isDelivery']==1)?'É para entrega!':'É para buscar na sorveteria!').'</p>
-        <p>Status: '.$row['statusPedido'].'</p>
-        <hr/>
-        ';
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        
+        $lastPedidoId = 0;
+
+        foreach($result as $row)
+        {
+            if($row['idPedido'] != $lastPedidoId)
+            {
+                $lastPedidoId = $row["idPedido"];
+                
+                echo '
+                <p>Número do Pedido: '.$row['idPedido'].'</p>
+                <p>Realizado em: '.$row['dataPedido'].'</p>
+                <p>Total: R$'.$row['totalPedido'].'</p>
+                <p>'.(($row['isDelivery']==1)?'É para entrega!':'É para buscar na sorveteria!').'</p>
+                <p>Status: '.$row['statusPedido'].'</p>
+                <hr/>
+                ';
+            }
+        }
+    }
+    else
+    {
+        echo '<p>Nenhum pedido realizado ainda!</p>';
     }
 
     $conn = null;

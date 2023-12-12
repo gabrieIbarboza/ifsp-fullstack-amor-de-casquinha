@@ -1,5 +1,6 @@
 <?php
-    session_start();
+require_once 'config/blockURLAccess.php';
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

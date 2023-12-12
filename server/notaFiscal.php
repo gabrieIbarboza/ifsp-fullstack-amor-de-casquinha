@@ -1,4 +1,5 @@
 <?php
+require_once 'config/blockURLAccess.php';
 session_start();
 if(isset($_POST["cart"]) && isset($_SESSION["cartArray"]))
 {

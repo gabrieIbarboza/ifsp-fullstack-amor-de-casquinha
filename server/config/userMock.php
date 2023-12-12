@@ -1,4 +1,6 @@
 <?php
+require 'blockURLAccess.php';
+
 $_SESSION["userEmail"] = 'clienteteste@gmail.com';
 $_SESSION["userName"] = 'Cliente Teste';
 $_SESSION["userTel"] = '11999999999';
