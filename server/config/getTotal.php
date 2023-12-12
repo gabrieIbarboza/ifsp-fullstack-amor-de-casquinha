@@ -28,7 +28,7 @@ if(isset($_SESSION["cartArray"]))
         <div class="c1">
             <div class="d-flex flex-row">
                 <div class="c2">
-                    <img src="'.$foto.'" alt="'.$nome.'" class="imagem">
+                    <img src="images/'.$foto.'" alt="'.$nome.'" class="imagem">
                 </div>
                 <div class="d-flex flex-column c3 ps-2">
                     <h3>'.$nome.'</h3>
