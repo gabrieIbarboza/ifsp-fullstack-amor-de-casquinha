@@ -23,7 +23,7 @@ session_start();
     ?>
 
     <main>
-            <h1>Picolé Sabores</h1>
+            <h1>Sabores</h1>
         
         <div class=" d-flex flex-column align-items-center justify-content-center">
           <?php  

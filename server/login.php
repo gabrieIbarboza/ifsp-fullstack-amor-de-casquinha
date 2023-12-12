@@ -12,6 +12,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="style/CabecalhoRodape.css">
     <link rel="stylesheet" href="style/loginS.css">
+    <link rel="stylesheet" href="style/forms.css">
+    <style>
+    main{
+        padding-top: 15px;
+    }
+
+    h3{
+        margin-top: 20px;
+    }
+    </style>
     <link rel="shortcut icon" href="images/iceCreamIcon.ico" type="image/x-icon">
 </head>
 <body>
@@ -27,7 +37,7 @@
                 <input type="email" name="email" placeholder="E-mail" required>
                 <input type="password" name="senha" placeholder="Senha" required>
                 <input type="submit" value="Login">
-                <a href="registro.php">Não possui login? Clique para criar conta!</a>
+                <a href="registro.php" class="pagRegistro">Não possui login? Clique para criar conta!</a>
             </form>
         </div>
     </main>

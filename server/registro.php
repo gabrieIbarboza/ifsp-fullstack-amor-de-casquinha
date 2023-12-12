@@ -20,12 +20,12 @@ session_start();
     <?php
         include_once 'components/header.php';
     ?>
-    <header class="text-center registro" style="margin: 200px auto 150px auto">
+    <div class="text-center registro" style="margin: 200px auto 150px auto">
         <div class="titulo d-flex align-items-center justify-content-center flex-column">
             <h3>Crie sua conta!</h3>
             <img src="images/Rectangle 1.png">
         </div>
-    </header>
+    </div>
     <main class="flex-grow-1 d-flex justify-content-center align-items-center">
         <form action="config/getInfo.php" method="post" class="d-flex flex-column my-4 formu">
             <input type="text" name="nome" maxlength="50" placeholder="Nome" required>
@@ -41,8 +41,7 @@ session_start();
 
         </form>
     </main>
-
-<footer class="registro">
+    <footer class="registro">
     <div class="conteiner-fluid d-flex justify-content-center rodape align-items-center flex-column">
         <div class="d-flex flex-row justify-content-around align-items-center">
             <img src="images/image 1.png" alt="Logo Amor de Casquinha" class="pe-4 logo">
@@ -50,11 +49,12 @@ session_start();
         </div>
         <img src="images/Rectangle 1048.png" class="pt-3 linha">
         <div class="text-center">
-            <p> &copy; 2023 Amor de Casquinha Todos os direitos reservados</p>
+            <p>&copy; 2023 Amor de Casquinha Todos os direitos reservados</p>
         </div>
     </div>
 </footer>
 <script src="script/header.js"></script>
+
 
 </body>
 </html>

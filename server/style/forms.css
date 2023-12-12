@@ -15,10 +15,25 @@ input {
     border: none;
 }
 
+.pagRegistro {
+    margin: 10px 0;
+    background-color: #C9EFFF;
+    width: 320px;
+    padding: 10px;
+    font-family: var(--Nunito);
+    font-weight: bold;
+    border-radius: 15px;
+    border: none;
+    text-align: center;
+}
+
 footer.registro {
     margin-top: 300px;
 }
 
+input[type=submit]{
+    color: black;
+}
 
 @media (max-width: 600px) {
     header {

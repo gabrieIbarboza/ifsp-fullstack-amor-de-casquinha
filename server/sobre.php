@@ -1,6 +1,8 @@
 <?php
-require_once 'config/blockURLAccess.php';
-session_start();
+    require_once 'config/blockURLAccess.php';
+    session_start();
+    require_once 'config/config.php';
+    include_once 'config/createPedido.php';
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
