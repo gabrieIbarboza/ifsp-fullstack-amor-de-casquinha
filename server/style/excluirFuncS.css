@@ -72,6 +72,10 @@ main{
     justify-content: center;
 }
 
+.c3 img{    
+    border-radius: 20px;
+}
+
 .conteiner1 button{
     width: 208px;
     background-color: var(--rosa-bebe);

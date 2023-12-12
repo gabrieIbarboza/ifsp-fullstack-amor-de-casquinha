@@ -47,7 +47,7 @@ if(isset($_SESSION["cartArray"]))
         echo '<div class="c1">
         <div class="row">
             <div class="col col-4 c2">
-                <img src="'.$foto.'" alt="'.$nome.'" class="imagem">
+                <img src="images/'.$foto.'" alt="'.$nome.'" class="imagem">
             </div>
             <div class="col c3">
                 <h3 class="">'.$nome.'</h3>

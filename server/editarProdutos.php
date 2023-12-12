@@ -7,11 +7,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil</title>
+    <title>Editar Produtos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="style/CabecalhoRodape.css">
-    <link rel="stylesheet" href="style/editarSabores.css">
+    <link rel="stylesheet" href="style/editarProdutosS.css">
+    <link rel="shortcut icon" href="images/iceCreamIcon.ico" type="image/x-icon">
 </head>
 <body>
     <?php
@@ -20,7 +21,7 @@
     <main>
         <h1>Produtos</h1>
         <div class=" d-flex flex-column align-items-center justify-content-center">
-            <!-- <button class="add">Adicionar Produto</button> -->
+            <button class="add">Adicionar Produto</button>
             <div>
                     <form action="config/createProducts.php" method="POST" id="addFormulario">
                         <label for="nome1">Nome:</label>
@@ -33,21 +34,15 @@
                     </form>
                 </div>
             <div class="conteiner1">
-                <div class="c1">
+
                     <?php
                         include_once 'config/getProductsFunc.php';
                     ?>
-                </div>
-                    
 
-                    <!-- <div class="botao text-center d-flex justify-content-evenly mt-3">
-                        <button id="excl">Excluir</button>
-                        <button id="edit">Editar</button>
-                    </div> -->
 
                 </div>
             </div>
-            <button class="voltar"><a href="index.html">Voltar</a></button>
+            <button class="voltar"><a href="index.php">Voltar</a></button>
         </div>
     </main>
     <?php
