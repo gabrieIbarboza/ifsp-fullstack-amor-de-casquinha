@@ -43,7 +43,3 @@
         </div>
     </div>
 </header>
-
-<?php
-    session_start();
-?>

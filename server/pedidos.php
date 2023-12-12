@@ -33,6 +33,5 @@
     <?php
         include_once 'components/footer.php';
     ?>
-    <script src="script/adicionar.js"></script>
 </body>
 </html>
