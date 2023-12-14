@@ -46,7 +46,7 @@ CREATE TABLE `tbcliente` (
 
 LOCK TABLES `tbcliente` WRITE;
 /*!40000 ALTER TABLE `tbcliente` DISABLE KEYS */;
-INSERT INTO `tbcliente` VALUES (1,0,'Laura Barros','laurabarros2541@gmail.com','$2y$10$yy9LKdz0kbC72v8q7kDfZurvpKJ9Bmqo3HDjYYE4GfwhyOi8oDXUq','(11) 99798-4601','CLIE',1),(2,0,'Jéssica Bueno','jessicabuenoramos5@gmail.com','$2y$2y$10$yy9LKdz0kbC72v8q7kDfZurvpKJ9Bmqo3HDjYYE4GfwhyOi8oDXUq','(11) 99268-4686','CLIE',2);
+INSERT INTO `tbcliente` VALUES (1,0,'Laura Barros','laurabarros2541@gmail.com','$2y$10$yy9LKdz0kbC72v8q7kDfZurvpKJ9Bmqo3HDjYYE4GfwhyOi8oDXUq','(11) 99798-4601','CLIE',1),(2,0,'Jéssica Bueno','jessicabuenoramos5@gmail.com','$2y$10$yy9LKdz0kbC72v8q7kDfZurvpKJ9Bmqo3HDjYYE4GfwhyOi8oDXUq','(11) 99268-4686','CLIE',2);
 /*!40000 ALTER TABLE `tbcliente` ENABLE KEYS */;
 UNLOCK TABLES;
 
