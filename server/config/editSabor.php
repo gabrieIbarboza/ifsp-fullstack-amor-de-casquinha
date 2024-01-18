@@ -12,15 +12,6 @@ session_start();
             $act = 1;
             try{
 
-                // ****** SEM PROCEDURE *********************
-                // $cmd = $conn->prepare("UPDATE tbVariacaoProduto SET nomeVariacao = :nome, precoVariacao = :preco, fotoVariacao = :foto where idVariacao = :id");
-                // $cmd->bindParam(":nome", $nome);
-                // $cmd->bindParam(":preco", $preco);
-                // $cmd->bindParam(":foto", $imag);
-                // $cmd->bindParam(":id", $idVari);
-                // ******************************************
-
-                // COM PROCEDURE
                 $cmd = $conn->prepare("CALL SP_VariacaoUpdate(?, ?, ?, ?, ?)");
                 $cmd->bindParam(1, $antNome);
                 $cmd->bindParam(2, $nome);
@@ -34,7 +25,7 @@ session_start();
                 echo "Erro genérico: " . $e->getMessage();
             }
 
-            header('Location: ../index.php');
+            header('Location: ../editarProdutos.php');
             exit();
             
         }else{

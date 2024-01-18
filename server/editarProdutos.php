@@ -43,7 +43,6 @@ session_start();
 
                 </div>
             </div>
-            <button class="voltar"><a href="index.php">Voltar</a></button>
         </div>
     </main>
     <?php

@@ -25,7 +25,7 @@ if(isset($_SESSION["userProfile"]) && ($_SESSION["userProfile"] == "FUNC" || $_S
                             <img src="images/FUNC.png" alt="Pedido '.$row["idPedido"].'">
                         </picture>
                     </div>
-                    <div class="d-flex flex-column">
+                    <div>
                         <div id="dados">
                             <h3 class="titulo px-3">Número do Pedido: '.$row["idPedido"].'</h3>
                             <div class="px-3">

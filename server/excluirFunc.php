@@ -45,7 +45,7 @@ session_start();
                                     <div class="c3">
                                         <picture>
                                         <source media="(min-width: 768px)" srcset="images/'.$row["profile"].'.png">
-                                        <img src="'.$row["profile"].'" alt="images/'.$row["nomeFuncionario"].'.png">
+                                        <img src="images/'.$row["profile"].'.png" alt="'.$row["profile"].'">
                                         </picture>
                                     </div>
                                     <div class="d-flex flex-column">
