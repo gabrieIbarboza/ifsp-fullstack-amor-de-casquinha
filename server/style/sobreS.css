@@ -22,6 +22,7 @@ main{
 .conteiner1{
     background-color: var(--azul-bebe);
     border-radius: 20px;
+    text-align: center;
 }
 
 button{
@@ -38,7 +39,9 @@ form{
     display: none;
 }
 .exibir{
-    display: block !important;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
 }
 form input{
     padding-left: 4px;

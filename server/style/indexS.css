@@ -26,6 +26,7 @@ header h1{
 .c1{
     display: grid;
     grid-template-columns: 160px 160px;
+    justify-items: center;
 }
 
 .imagem{

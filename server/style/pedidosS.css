@@ -10,9 +10,22 @@
     --verde-bebe: #E2FFC7;
 }
 
+main{
+    min-height: calc(100vh - 170px);
+}
+
 h1{
     font-family: var(--Agbalumo);
-    font-weight: bold;
+    font-size: 2rem;
+    width: 70%;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.conteiner{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .conteiner1{
@@ -34,8 +47,18 @@ h1{
     border-radius: 20px;
 }
 
+.c3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .c3 h3{
     font-size: 1.50rem;
+}
+
+.c3 picture img{
+    width: 120px;
 }
 
 .botao #excl{
@@ -96,12 +119,19 @@ select{
     }
     .conteiner1{
         width: 970px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
     }
     .c1{
         width: 700px !important;
     }
     .c2{
-        max-width: 20% !important;
+        max-width: 100% !important;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
     }
     .c3{
         max-width: 60% !important;

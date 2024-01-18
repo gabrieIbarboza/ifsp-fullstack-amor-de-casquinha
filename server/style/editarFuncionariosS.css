@@ -22,10 +22,6 @@ main{
     min-height: calc(100vh - 170px);
 }
 
-.imagem{
-    border-radius: 20px;
-    margin-top: 10px;
-}
 
 .add{
     background-color: var(--azul-bebe);
@@ -64,6 +60,10 @@ main{
     width: 200px;
     display: flex;
     justify-content: center;
+}
+
+.c3 picture img{
+    width: 120px;
 }
 
 .conteiner1 button{

@@ -22,9 +22,8 @@ main{
     min-height: calc(100vh - 170px);
 }
 
-.imagem{
-    border-radius: 20px;
-    margin-top: 10px;
+h3{
+    text-align: center;
 }
 
 .add{
@@ -72,8 +71,9 @@ main{
     justify-content: center;
 }
 
-.c3 img{    
+.c3 picture img{    
     border-radius: 20px;
+    width: 120px;
 }
 
 .conteiner1 button{
