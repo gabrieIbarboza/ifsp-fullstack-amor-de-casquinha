@@ -29,6 +29,7 @@ Essas funcionalidades combinadas oferecem uma solução abrangente para a gestã
 ## Tech utilizadas
 
 **Front-end:** 
+
 ![HTML](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)
 
 ![CSS](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)
@@ -36,6 +37,7 @@ Essas funcionalidades combinadas oferecem uma solução abrangente para a gestã
 ![BootStrap](	https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 
 **Back-end:** 
+
 ![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
 
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
