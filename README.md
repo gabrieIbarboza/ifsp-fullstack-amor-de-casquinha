@@ -56,10 +56,11 @@ Essas funcionalidades combinadas oferecem uma solução abrangente para a gestã
 
 **Bonus -** Caso queira logar como funcionário utilize:
 -  Para funcionário padrão:
--  
+   
 Email: carolinyr9@gmail.com  | Senha: 1234
+
 - Para funcionário administrador:
-- 
+  
 Email: gabrielbarb@gmail.com | Senha: 1234
 
 
