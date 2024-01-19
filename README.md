@@ -1,7 +1,7 @@
 
 ![Amor de Casquinha]([https://i.imgur.com/wJhEaeW.png](https://i.imgur.com/wJhEaeW.png))
 
-| [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/) | [![Status](https://img.shields.io/badge/Status-Conclu%C3%ADdo-%2322af2e?style=flat)](https://choosealicense.com/licenses/mit/) |
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)  [![Status](https://img.shields.io/badge/Status-Conclu%C3%ADdo-%2322af2e?style=flat)](https://choosealicense.com/licenses/mit/) 
 
 Amor de Casquinha é uma sorveteria fictícia. O site em questão é um sistema de comércio eletrônico baseado em PHP e banco de dados. Ele possui funcionalidades específicas para funcionários e clientes, proporcionando uma experiência de compra e gerenciamento eficiente. Algumas características principais incluem:
 
