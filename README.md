@@ -1,4 +1,3 @@
-
 ![Amor de Casquinha]([https://i.imgur.com/wJhEaeW.png](https://i.imgur.com/wJhEaeW.png))
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)  [![Status](https://img.shields.io/badge/Status-Conclu%C3%ADdo-%2322af2e?style=flat)](https://choosealicense.com/licenses/mit/) 
