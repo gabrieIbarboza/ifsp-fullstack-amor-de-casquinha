@@ -68,4 +68,5 @@ Email: gabrielbarb@gmail.com | Senha: 1234
 
 - [@gabrieIbarboza](https://github.com/gabrieIbarboza)
 - [@Jessybr](https://github.com/Jessybr)
+- [@LauraBSouza](https://github.com/LauraBSouza)
 
