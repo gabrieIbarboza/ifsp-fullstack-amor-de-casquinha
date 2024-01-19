@@ -1,5 +1,5 @@
 
-![Amor de Casquinha](https://imgbox.com/gYQj8LiH)
+![Amor de Casquinha](https://imgur.com/a/27WxfUT)
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/) 
 
