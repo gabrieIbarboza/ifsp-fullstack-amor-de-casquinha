@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Nunito:wght@400;700&display=swap');
+
+:root{
+    --roxo-bebe: #D4C7FF;
+    --Nunito: 'Nunito', sans-serif;
+    --Agbalumo: 'Agbalumo';
+    --azul-bebe: #C9EFFF;
+    --rosa-bebe: #FFC7E8;
+    --amarelo-bebe: #FFFAC7;
+    --verde-bebe: #E2FFC7;
+}
+
+main{
+    min-height: calc(100vh - 170px);
+}
+
+.conteiner1{
+    background-color: var(--verde-bebe);
+    border-radius: 20px;
+    width: 342px;
+}
+
+.conteiner1 h3{
+    margin-top: 20px;
+}
+
+.c1{
+    margin: 20px 0;
+    border-top: 2px solid var(--roxo-bebe);
+    border-bottom: 2px solid var(--roxo-bebe);
+    padding: 8px 0;
+}
+
+.imagem{
+    border-radius: 20px;
+    width: 120px;
+    height: auto;
+}
+
+.c3 h3{
+    font-size: 1.50rem;
+}
+
+.botao{
+    height: 30px;
+}
+
+.btn{
+    background-color: var(--rosa-bebe);
+    border: none;
+    border-radius: 7px;
+    font-family: var(--Agbalumo);
+    height: 30px;
+    margin-bottom: 20px;
+}
+
+.botao .b-excluir{
+    background-color: var(--rosa-bebe);
+    border: none;
+    border-radius: 7px;
+    font-family: var(--Agbalumo);
+    width: 90px;
+    height: 30px;
+}
+
+.botao p{
+    background-color: var(--rosa-bebe);
+    border: none;
+    border-radius: 7px;
+    font-family: var(--Agbalumo);
+    height: 30px;
+    padding: 0 10px;
+}
+
+.c4{
+    display: flex;
+    justify-content: space-between !important;
+    width: 100%;
+    margin: 20px 0;
+}
+
+@media (min-width: 768px)  {
+    .conteiner1{
+        width: 40%;
+        padding: 20px 0;
+    }
+    
+    .c1{
+        width: 80%;
+    }
+
+    .c4{
+        width: 80%;
+    }
+}

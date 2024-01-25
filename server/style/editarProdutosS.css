@@ -18,13 +18,14 @@ h1{
     text-align: center;
     margin: 20px auto;
 }
+
 main{
     min-height: calc(100vh - 170px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-.conteiner1 button{
-    width: 208px;
-    background-color: var(--azul-bebe);
-}
+
 
 .conteiner1{
     display: flex;
@@ -36,62 +37,56 @@ main{
     padding: 15px;
     border-radius: 20px;
     margin: 20px 0;
-    display: flex;
-    flex-direction: column;
+    
 }
 
-.c2 {
+.categ{
     display: flex;
-    flex-direction: row !important;
+    flex-direction: row;
+    background-color: var(--verde-bebe);
+    border: none;
 }
 
-.c3{
-    width: 200px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.imagem{
-    border-radius: 20px;
-    margin: 10px;
-    width: 110px;
+picture img{
+    margin: 8px;
+    width: 160px;
     height: auto;
 }
 
-.titulo{
-    margin-top: 10px;
-    font-family: var(--Nunito);
-    font-size: 1.25rem;
-    font-weight: bold;
-    padding-left: 10px;
+.botao{
+    margin: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.preco{
-    margin: 50px 0 0 0;
-    padding-left: 10px;
-}
-
-.preco span{
-    font-weight: bold;
+.botao #excl, #edit, #vari{
+    border: none;
+    border-radius: 7px;
+    font-family: var(--Agbalumo);
+    width: 90px;
+    height: 30px;
+    margin: 5px 0;
 }
 
 .botao #excl{
     background-color: var(--rosa-bebe);
-    border: none;
-    border-radius: 7px;
-    font-family: var(--Agbalumo);
-    width: 90px;
-    height: 30px;
+
 }
 
 .botao #edit{
     background-color: var(--azul-bebe);
-    border: none;
-    border-radius: 7px;
-    font-family: var(--Agbalumo);
-    width: 90px;
-    height: 30px;
+
+}
+
+.botao #vari{
+    background-color: var(--amarelo-bebe);
+    width: 100px !important;
+}
+
+.botao #vari a, a:visited, a:active{
+    color: black;
 }
 
 .botao #excl a, a:visited, a:active{
@@ -123,7 +118,7 @@ main{
     font-size: 1.60rem;
     width: 190px;
     height: 40px;
-    margin-top: 20px;
+    margin: 20px auto;
 }
 
 .voltar a, a:visited, a:active{
@@ -158,11 +153,6 @@ form{
 
 @media (min-width: 768px) {
     
-    .imagem{
-        width: 140px;
-        height: auto;
-    }
-
     .conteiner1{
         display: flex;
         flex-direction: row;
@@ -176,8 +166,14 @@ form{
     h1{
         padding-top: 20px !important;
     }
-    .botao #excl, #edit{
-        font-size: 1.25rem;
+    .botao #excl, #edit, #vari{
+        font-size: 20px;
     }
+    .botao #vari{
+        background-color: var(--amarelo-bebe);
+        width: 100px !important;
+        height: auto;
+    }
+    
     
 }

@@ -395,6 +395,28 @@ END;
 -- Login
 -- -----------------------------------------------------
 DELIMITER //
+CREATE PROCEDURE SP_Login(
+	email varchar(60)
+)
+BEGIN
+	IF EXISTS (SELECT emailFuncionario FROM tbFuncionario WHERE emailFuncionario like email)
+    THEN
+		SELECT * FROM tbFuncionario WHERE emailFuncionario LIKE email LIMIT 1;
+	ELSEIF EXISTS (SELECT emailCliente FROM tbCliente WHERE emailCliente LIKE email)
+		THEN
+			SELECT * 
+				FROM tbCliente 
+				INNER JOIN tbEndereco
+				ON tbCliente.tbEndereco_idEndereco = tbEndereco.idEndereco
+				WHERE emailCliente LIKE email
+                LIMIT 1;
+	ELSE
+		SELECT '403' AS 'Status', 'ERROR_EMAIL_NAO_ENCONTRADO' AS 'Error', '' AS 'Message', '' AS 'Body';
+    END IF;
+END;
+//
+
+DELIMITER //
 CREATE PROCEDURE SP_UpdatePassword(
 	email varchar(60), newPass varchar(255)
 )
@@ -574,6 +596,38 @@ BEGIN
 END;
 //
 DELIMITER //
+CREATE PROCEDURE SP_VariacaoReadByProdutoId(
+	idProduto int
+)
+BEGIN
+	SELECT * 
+		FROM tbVariacaoProduto 
+        WHERE tbProduto_idProduto = idProduto;
+END;
+//
+DELIMITER //
+CREATE PROCEDURE SP_VariacaoReadByProduto(
+	produto varchar(50)
+)
+BEGIN
+	SET @produto_id := (SELECT idProduto FROM tbProduto WHERE nomeProduto like produto);
+	SELECT * 
+		FROM tbVariacaoProduto 
+        WHERE tbProduto_idProduto = @produto_id;
+END;
+//
+DELIMITER //
+CREATE PROCEDURE SP_VariacaoReadById(
+	id int
+)
+BEGIN
+	SELECT * 
+		FROM tbVariacaoProduto 
+        WHERE isActive = 1
+		AND idVariacao = id;
+END;
+//
+DELIMITER //
 CREATE PROCEDURE SP_VariacaoReadByName(
 	nome varchar(50)
 )
@@ -671,6 +725,29 @@ BEGIN
         LEFT OUTER JOIN tbProdutoPedido
 		ON tbPedido.idPedido = tbProdutoPedido.tbPedido_idPedido
         WHERE tbPedido.statusPedido like statusP;
+END;
+//
+DELIMITER //
+CREATE PROCEDURE SP_PedidoReadAllNotCompleted()
+BEGIN
+	SELECT * 
+		FROM tbPedido
+        LEFT OUTER JOIN tbProdutoPedido
+		ON tbPedido.idPedido = tbProdutoPedido.tbPedido_idPedido
+        WHERE (tbPedido.statusPedido not like 'Finalizado'
+        AND tbPedido.statusPedido not like 'Entregue');
+END;
+//
+DELIMITER //
+CREATE PROCEDURE SP_PedidoReadById(
+	idP int
+)
+BEGIN
+	SELECT * 
+		FROM tbPedido
+        LEFT OUTER JOIN tbProdutoPedido
+		ON tbPedido.idPedido = tbProdutoPedido.tbPedido_idPedido
+        WHERE tbPedido.idPedido = idP;
 END;
 //
 
@@ -911,6 +988,21 @@ call SP_PedidoReadByStatus(
 	'Recebido'
 );
 
+
+-- FRONTEND TEST
+call SP_ProdutoCreate(
+    'Sorvete em Bola', 'Bola', 'images/sorveteBolaDesktop.png'
+);
+call SP_ProdutoCreate(
+    'Picolé', 'Picolé', 'images/picoleDesktop.png'
+);
+call SP_ProdutoReadAllActive(1000,0);
+call SP_ProdutoUpdate(
+	'Açaí', 'Açaí', 'Açaí', 'images/sorvetePoteDesktop.png', 1
+);
+call SP_VariacaoReadById(1);
+
+call SP_ClienteReadByEmail('teste@gabriel.com');
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;

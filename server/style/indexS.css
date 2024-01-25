@@ -26,6 +26,13 @@ header h1{
 .c1{
     display: grid;
     grid-template-columns: 160px 160px;
+    justify-items: center;
+}
+
+.imagem{
+    width: 130px;
+    height: auto;
+    margin: 10px;
 }
 
 .conteiner1 h3{
@@ -40,12 +47,8 @@ header h1{
     width: 148px;
     border-radius: 20px;
     margin-bottom: 20px;
-    height: 210px;
-}
-
-.categ img{
-    width: 148px;
-    border-radius: 20px;
+    height: auto;
+    margin: 20px;
 }
 
 .categ button{
@@ -55,7 +58,7 @@ header h1{
     border-radius: 20px;
     font-family: var(--Nunito);
     font-weight: bold;
-    margin-top: 2%;
+    margin: 10px;
 }
 
 .categ button a, a:visited, a:active{
